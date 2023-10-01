@@ -1,4 +1,6 @@
 // import * as React from 'react';
+
+// mui
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -22,7 +24,7 @@ const ProtoTypeCard = (props: {
 }) => {
 
   return (
-    <Card sx={{ display: 'flex' }}>
+    <Card sx={{ display: 'flex' }} key={props.prototype_id}>
       <CardMedia
         component="img"
         sx={{ height: 240 }}
@@ -67,10 +69,14 @@ const ProtoTypeCard = (props: {
 const ProtoPediaCarousel = () => {
 
   const items = prototypes.prototypes.map(
-    p => (<ProtoTypeCard
-      name={p.name} prototype_id={p.prototype_id}
-      img={p.images[0]} summary={p.summary}
-    />)
+    p => {
+      const ss = p.images[0].split("/");
+      const img_path = `/prototypes/${ss[ss.length - 1]}`;
+      return (<ProtoTypeCard
+        name={p.name} prototype_id={p.prototype_id}
+        img={img_path} summary={p.summary} key={p.prototype_id}
+      />)
+    }
   )
   return (
     <>

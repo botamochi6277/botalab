@@ -3,6 +3,7 @@ import yargs from 'yargs';
 import { hideBin } from "yargs/helpers";
 import axios from 'axios';
 import fs from 'fs';
+import path from 'path';
 
 const args = yargs(hideBin(process.argv))
   .command("* <user_id> <api_key>", "fetch prototype data from ProtoPedia")
@@ -17,7 +18,12 @@ const args = yargs(hideBin(process.argv))
     demandOption: true,
   })
   .option("output", {
-    default: "protopytes.json",
+    alias: "o",
+    default: "src/assets/protopytes.json",
+    type: "string"
+  })
+  .option("img_dir", {
+    default: "public/prototypes",
     type: "string"
   })
   .parseSync()
@@ -61,7 +67,17 @@ const parseProjectData = (data0 /* : PrototypeRawData*/) => {
   return proto;
 }
 
-const fetchProjectData = (token/*: string*/, username/*: string*/, output) => {
+const downloadFile = (url, path) => {
+  axios.get(url, { responseType: "arraybuffer" })
+    .then((res) => {
+      fs.writeFileSync(path, Buffer.from(res.data), 'binary');
+    }).catch((error) => {
+      console.log(error);
+    })
+}
+
+const fetchProjectData = (
+  token/*: string*/, username/*: string*/, output, img_dir) => {
   // input validation
   const token_ref = token.match(/[a-f0-9]{32}/g);
   if (!token_ref) {
@@ -83,11 +99,17 @@ const fetchProjectData = (token/*: string*/, username/*: string*/, output) => {
       const s = JSON.stringify({ datetime, prototypes });
       fs.writeFileSync(output, s);
 
+      prototypes.map((p) => {
+        const img = p?.images[0];
+        const img_path = path.join(img_dir, path.basename(img));
+        downloadFile(img, img_path);
+      })
+
     }
   }).catch((error) => {
     console.log(error);
   })
 }
 
-fetchProjectData(args.api_key, args.user_id, args.output);
+fetchProjectData(args.api_key, args.user_id, args.output, args.img_dir);
 
