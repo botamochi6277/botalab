@@ -41,11 +41,6 @@ function App() {
         <h2>ProtoPedia Works</h2>
         <ProtoPediaCarousel />
 
-        {/* Zenn */}
-        {/* Twitter */}
-        {/* GrabCad */}
-        {/* Thingiverse */}
-        {/* Vrm Hub */}
         <Button
           startIcon={theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           variant="outlined"

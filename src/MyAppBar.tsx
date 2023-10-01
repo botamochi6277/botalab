@@ -4,12 +4,18 @@ import { AppBar, Container, Toolbar, Typography, Link, IconButton } from "@mui/m
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import ArticleIcon from '@mui/icons-material/Article';
+import ViewInArIcon from '@mui/icons-material/ViewInAr';
+import HexagonIcon from '@mui/icons-material/Hexagon';
 
 const MyAppBar = () => {
 
   const icon_items = [
+    { name: "grabcad", to: "https://grabcad.com/botamochi-1", icon: <ViewInArIcon /> },
+    { name: "thingiverse", to: "https://www.thingiverse.com/botamochi/designs", icon: <HexagonIcon /> },
+    { name: "zenn", to: "https://zenn.dev/botamochi6277", icon: <ArticleIcon /> },
+    { name: "twitter", to: "https://twitter.com/botamochi6277", icon: <TwitterIcon /> },
     { name: "github", to: 'https://github.com/botamochi6277', icon: <GitHubIcon /> },
-    { name: "twitter", to: "https://twitter.com/botamochi6277", icon: <TwitterIcon /> }
   ]
   return (
     <AppBar position="static" color="primary" enableColorOnDark>

@@ -19,7 +19,7 @@ const args = yargs(hideBin(process.argv))
   })
   .option("output", {
     alias: "o",
-    default: "src/assets/protopytes.json",
+    default: "src/assets/prototypes.json",
     type: "string"
   })
   .option("img_dir", {

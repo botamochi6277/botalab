@@ -27,7 +27,7 @@ const ProtoTypeCard = (props: {
     <Card sx={{ display: 'flex' }} key={props.prototype_id}>
       <CardMedia
         component="img"
-        sx={{ height: 240 }}
+        sx={{ height: 240, maxWidth: 600 }}
         image={props.img}
         alt="Live from space album cover"
       />
