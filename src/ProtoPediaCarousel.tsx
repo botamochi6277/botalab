@@ -71,7 +71,7 @@ const ProtoPediaCarousel = () => {
   const items = prototypes.prototypes.map(
     p => {
       const ss = p.images[0].split("/");
-      const img_path = `/prototypes/${ss[ss.length - 1]}`;
+      const img_path = `./prototypes/${ss[ss.length - 1]}`;
       return (<ProtoTypeCard
         name={p.name} prototype_id={p.prototype_id}
         img={img_path} summary={p.summary} key={p.prototype_id}
