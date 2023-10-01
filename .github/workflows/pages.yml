@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+      - name: setup nodejs
+        run: |
+          npm install
       - name: fetch prototypes
         run: |
           mkdir public/prototypes
@@ -17,7 +20,6 @@ jobs:
           node scripts/fetch_prototype.js ${{vars.PROTOPEDIA_USERNAME}} ${{secrets.PROTOPEDIA_API_KEY}}
       - name: build pages
         run: |
-          npm install
           npm run build
       - name: Deploy pages
         uses: peaceiris/actions-gh-pages@v3
