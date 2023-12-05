@@ -4,7 +4,7 @@ import {
   Button,
   Box,
   CardMedia,
-  createTheme, ThemeProvider, CssBaseline, Typography, Tab
+  createTheme, ThemeProvider, CssBaseline, Typography
 } from '@mui/material';
 
 // icons
@@ -12,6 +12,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 // custom
 import ProtoPediaCarousel from './ProtoPediaCarousel'
+import ProtoPediaList from './ProtoPediaList';
 import MyAppBar from './MyAppBar';
 import CircleHead from './CircleHead';
 import ExhibitionTimeline from './ExhibitionTimeline';
@@ -52,7 +53,7 @@ function App() {
         />
 
         <MyTabs items={[
-          { label: "ProtoPedia Works", content: <ProtoPediaCarousel /> },
+          { label: "ProtoPedia Works", content: <ProtoPediaList /> },
           { label: "ExhibitionTimeline", content: <ExhibitionTimeline /> },
           { label: "Test", content: <Typography >Hello Tab</Typography> }]}
         />
