@@ -1,15 +1,10 @@
-
 // mui
-
 import {
-  Card, CardContent, CardActions, CardMedia, CardActionArea,
+  Card, CardContent, CardMedia, CardActionArea,
   Link,
   Typography,
-  Button
 } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-// icons
-import LinkIcon from '@mui/icons-material/Link';
 
 // assets
 import prototypes from "./assets/prototypes.json";

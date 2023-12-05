@@ -29,7 +29,12 @@ export default function CircleHead(props: { title: string, subtitle: string, img
   return (
     <Card >
       <Grid container spacing={2}>
-        <Grid xs={4}>
+        <Grid xs={4}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
           <Avatar
             alt="Remy Sharp"
             src={props.img}
