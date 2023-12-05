@@ -2,11 +2,12 @@
 
 import * as React from 'react';
 import {
-  Typography, Link, IconButton,
+  Typography, Stack, IconButton,
   Card,
   CardContent,
   CardActions,
   Avatar,
+  Chip
 } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -20,12 +21,13 @@ import HexagonIcon from '@mui/icons-material/Hexagon';
 
 export default function CircleHead(props: { title: string, subtitle: string, img: string, description: string | undefined }) {
   const icon_items = [
-    { name: "grabcad", to: "https://grabcad.com/botamochi-1", icon: <ViewInArIcon /> },
-    { name: "thingiverse", to: "https://www.thingiverse.com/botamochi/designs", icon: <HexagonIcon /> },
-    { name: "zenn", to: "https://zenn.dev/botamochi6277", icon: <ArticleIcon /> },
+    { name: "GitHub", to: 'https://github.com/botamochi6277', icon: <GitHubIcon /> },
     { name: "twitter", to: "https://twitter.com/botamochi6277", icon: <TwitterIcon /> },
-    { name: "github", to: 'https://github.com/botamochi6277', icon: <GitHubIcon /> },
+    { name: "Zenn", to: "https://zenn.dev/botamochi6277", icon: <ArticleIcon /> },
+    { name: "GRABCAD", to: "https://grabcad.com/botamochi-1", icon: <ViewInArIcon /> },
+    { name: "Thingiverse", to: "https://www.thingiverse.com/botamochi/designs", icon: <HexagonIcon /> },
   ]
+  // https://m3.material.io/components/chips/guidelines
   return (
     <Card >
       <Grid container spacing={2}>
@@ -56,19 +58,23 @@ export default function CircleHead(props: { title: string, subtitle: string, img
           </CardContent>
 
           <CardActions>
-            {/* media including twitter, zenn, github */}
-            {icon_items.map(item => (
-              <IconButton
-                component={Link}
-                href={item.to}
-                target="_blank"
-                rel="noopener"
-                sx={{ color: 'inherit' }}
-                key={item.name}
-              >
-                {item.icon}
-              </IconButton>
-            ))}
+
+            <Stack direction={"row"} spacing={1} useFlexGap flexWrap="wrap">
+              {icon_items.map(item => (
+                <Chip
+                  icon={item.icon}
+                  label={item.name}
+                  key={item.name}
+
+                  component="a"
+                  href={item.to}
+                  target="_blank"
+                  rel="noopener"
+                  clickable
+                />
+
+              ))}
+            </Stack>
           </CardActions>
         </Grid>
       </Grid>
