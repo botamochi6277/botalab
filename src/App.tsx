@@ -4,16 +4,18 @@ import {
   Button,
   Box,
   CardMedia,
-  createTheme, ThemeProvider, CssBaseline, Typography
+  createTheme, ThemeProvider, CssBaseline, Typography, Tab
 } from '@mui/material';
 
+// icons
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
-
+// custom
 import ProtoPediaCarousel from './ProtoPediaCarousel'
 import MyAppBar from './MyAppBar';
 import CircleHead from './CircleHead';
 import ExhibitionTimeline from './ExhibitionTimeline';
+import MyTabs from './MyTabs';
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -42,19 +44,18 @@ function App() {
         <CardMedia component="img" image='https://dummyimage.com/2560x263/2b2b2b/f7f7f7&text=dummy_banner'>
         </CardMedia>
 
-        <CircleHead title='BotaLab' subtitle='@botamochi6277' img='https://dummyimage.com/256x256/2b2bff/f7f7f7&text=B'
-          description={"趣味でメイカーとして活動しているbotamochiです. イベントでは個人サークルのBotaLabとして出展しています."} />
+        <CircleHead
+          title='BotaLab'
+          subtitle='@botamochi6277'
+          img='https://dummyimage.com/256x256/2b2bff/f7f7f7&text=B'
+          description={"趣味でメイカーとして活動しているbotamochiです. イベントでは個人サークルのBotaLabとして出展しています."}
+        />
 
-        <h2>About</h2>
-        <Typography>
-          エンジニア/メイカーのbotamochi6277が作品を紹介するページです.<br />
-          botamochi6277, a engineer and a maker, introduces his works in this site.
-        </Typography>
-        {/* https://mui.com/material-ui/react-tabs/ */}
-        <h2>ProtoPedia Works</h2>
-        <ProtoPediaCarousel />
-
-        <ExhibitionTimeline />
+        <MyTabs items={[
+          { label: "ProtoPedia Works", content: <ProtoPediaCarousel /> },
+          { label: "ExhibitionTimeline", content: <ExhibitionTimeline /> },
+          { label: "Test", content: <Typography >Hello Tab</Typography> }]}
+        />
 
         <Button
           startIcon={theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
