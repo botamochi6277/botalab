@@ -1,0 +1,109 @@
+{
+  "exhibitions": [
+    {
+      "date": "2019-09-21",
+      "name": "NT Nagoya 2019",
+      "exhibits": "CAMROBO++ x1",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2019-12-14",
+      "name": "NT Kaga 2019",
+      "exhibits": "CAMROBO++ x2",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2020-02-15",
+      "name": "Tsukuba Mini Maker Faire 2020",
+      "exhibits": "CAMROBO++ b x1 CAMROBO++ x1",
+      "link": "",
+      "location": "",
+      "icon": "cookie"
+    },
+    {
+      "date": "2021-06-26",
+      "name": "NT Kanazawa 2021",
+      "exhibits": "Hacka-Tail v3 x1 Hacka-Tail v4 x2",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2021-11-26",
+      "name": "NT Sabae 2021",
+      "exhibits": "Hacka-Tail v4 x2 Hacka-Tail wearable x1",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2022-01-15",
+      "name": "NT Kaga 2022 (New Year)",
+      "exhibits": "Hacka-Tail v4 鯨(ラビットボア白) Hacka-Tail v4w 装着型-黒電飾脇差(青)",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2022-06-19",
+      "name": "NT Kanazawa 2022",
+      "exhibits": "Hacka-Tail v4.1 白鯨 (内部ケースの更新) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2022-11-12",
+      "name": "Tukurogaya 2022",
+      "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
+      "link": "",
+      "location": "",
+      "icon": "architecture"
+    },
+    {
+      "date": "2022-12-03",
+      "name": "Mini Maker Faire Ogaki 2022",
+      "exhibits": "Hacka-Tail v4.3 茶鯨 (XIAO BLE + 新型ケース) Hacka-Tail v4.2 白鯨 (XIAO BLE + 旧型ケース) Hacka-Tail v4w 装着型-黒",
+      "link": "",
+      "location": "",
+      "icon": "cookie"
+    },
+    {
+      "date": "2023-02-04",
+      "name": "NT Kaga 2023",
+      "exhibits": "Hacka-Tail v4.4 茶鯨 (水道ホース採用版) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1.1 白",
+      "link": "",
+      "location": "",
+      "icon": "bolt"
+    },
+    {
+      "date": "2023-06-17",
+      "name": "NT Kanazawa 2023",
+      "exhibits": "サイボーグヘルメット 折れた電飾刀 Hacka-Tail v4.4 茶鯨 (水道ホース採用版)",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22023",
+      "location": "金沢駅東もてなしドーム地下広場",
+      "icon": "train",
+      "period": ""
+    },
+    {
+      "name": "NT Tokyo 2023",
+      "date": "2023-11-04",
+      "location": "科学技術館 催事場2～4",
+      "icon": "science",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E6%9D%B1%E4%BA%AC2023",
+      "period": ",05"
+    },
+    {
+      "name": "NT Nagoya 2023",
+      "date": "2023-11-18",
+      "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
+      "icon": "star",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2023",
+      "period": ",19"
+    }
+  ]
+}

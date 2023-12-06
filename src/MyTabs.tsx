@@ -25,7 +25,6 @@ export default function MyTabs(
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setTabId(newValue);
   };
-
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={tab_id}>

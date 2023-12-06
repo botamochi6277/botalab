@@ -11,7 +11,6 @@ import {
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 // custom
-import ProtoPediaCarousel from './ProtoPediaCarousel'
 import ProtoPediaList from './ProtoPediaList';
 import MyAppBar from './MyAppBar';
 import CircleHead from './CircleHead';
@@ -54,8 +53,7 @@ function App() {
 
         <MyTabs items={[
           { label: "ProtoPedia Works", content: <ProtoPediaList /> },
-          { label: "ExhibitionTimeline", content: <ExhibitionTimeline /> },
-          { label: "Test", content: <Typography >Hello Tab</Typography> }]}
+          { label: "Exhibition Timeline", content: <ExhibitionTimeline /> }]}
         />
 
         <Button
