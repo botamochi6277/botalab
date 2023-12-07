@@ -28,9 +28,9 @@ export default function CircleHead(props: { title: string, subtitle: string, img
   return (
     <Card >
       <Grid container spacing={2}>
-        <Grid xs={4}
+        <Grid xs={0} sm={4}
           sx={{
-            display: "flex",
+            display: { xs: "none", sm: "flex" },
             justifyContent: "center",
             alignItems: "center"
           }}>
@@ -46,7 +46,7 @@ export default function CircleHead(props: { title: string, subtitle: string, img
             src={props.img}
           />
         </Grid>
-        <Grid xs={8}>
+        <Grid xs={12} sm={8}>
           <CardContent>
             <Typography component="div" variant="h3">
               {props.title}

@@ -27,7 +27,7 @@ const ProtoTypeCard = (props: {
       >
         <CardMedia
           component="img"
-          sx={{ height: 240, maxWidth: 600 }}
+          sx={{ height: { xs: 160, sm: 240 }, maxWidth: 600 }}
           image={props.img}
           alt="Live from space album cover"
         />
@@ -36,7 +36,7 @@ const ProtoTypeCard = (props: {
             {props.name}
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="div"
-            sx={{ display: "flex", justifyContent: "space-between" }}
+            sx={{ display: { xs: "none", sm: "flex" }, justifyContent: "space-between" }}
           >
             {props.summary}
           </Typography>
@@ -60,7 +60,7 @@ export default function ProtoPediaList() {
 
   return (
     <Grid container spacing={2}>
-      {items.map((item, idx) => <Grid xs={6} sm={4} md={3} key={idx}>{item}</Grid>)}
+      {items.map((item, idx) => <Grid xs={12} sm={6} md={4} lg={3} key={idx}>{item}</Grid>)}
     </Grid>
   )
 }

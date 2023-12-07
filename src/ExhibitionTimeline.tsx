@@ -35,7 +35,7 @@ export default function ExhibitionTimeline() {
   const tl_items = items.reverse().map(item => (
     <TimelineItem key={item.name}>
       <TimelineOppositeContent
-        sx={{ m: 'auto 0' }}
+        sx={{ m: 'auto 0', display: { xs: "none", sm: "block" } }}
         align="right"
         variant="body2"
         color="text.secondary"
