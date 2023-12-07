@@ -1,26 +1,23 @@
 // header like youtube channel
-
-import * as React from 'react';
 import {
-  Typography, Stack, IconButton,
+  Typography, Stack,
   Card,
   CardContent,
   CardActions,
-  Avatar,
+  Box,
   Chip
 } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
 // icons
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ArchitectureIcon from '@mui/icons-material/Architecture';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ArticleIcon from '@mui/icons-material/Article';
 import ViewInArIcon from '@mui/icons-material/ViewInAr';
 import HexagonIcon from '@mui/icons-material/Hexagon';
 
 export default function CircleHead(props: { title: string, subtitle: string, img: string, description: string | undefined }) {
-  const icon_items = [
+  const social_items = [
     { name: "GitHub", to: 'https://github.com/botamochi6277', icon: <GitHubIcon /> },
     { name: "twitter", to: "https://twitter.com/botamochi6277", icon: <TwitterIcon /> },
     { name: "Zenn", to: "https://zenn.dev/botamochi6277", icon: <ArticleIcon /> },
@@ -37,10 +34,16 @@ export default function CircleHead(props: { title: string, subtitle: string, img
             justifyContent: "center",
             alignItems: "center"
           }}>
-          <Avatar
-            alt="Remy Sharp"
+          <Box
+            component="img"
+            sx={{
+              aspectRatio: 1,
+              width: { xs: 140, sm: 200 },
+              objectFit: "cover",
+              borderRadius: "50%"
+            }}
+            alt="Channel Art"
             src={props.img}
-            sx={{ width: 200, height: 200 }}
           />
         </Grid>
         <Grid xs={8}>
@@ -60,7 +63,7 @@ export default function CircleHead(props: { title: string, subtitle: string, img
           <CardActions>
 
             <Stack direction={"row"} spacing={1} useFlexGap flexWrap="wrap">
-              {icon_items.map(item => (
+              {social_items.map(item => (
                 <Chip
                   icon={item.icon}
                   label={item.name}
