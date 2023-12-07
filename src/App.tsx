@@ -41,13 +41,23 @@ function App() {
         <MyAppBar />
         {/* Banner/Header Image */}
         {/* https://jp.cyberlink.com/blog/photoeditor/1755/best-photo-software-to-make-youtube-banners#:~:text=YouTube%20ヘッダー・バナーサイズと作成時の注意点,-ヘッダー・バナー作成&text=以下の図のよう,のサイズで作ります%E3%80%82 */}
-        <CardMedia component="img" image='https://dummyimage.com/2560x263/2b2b2b/f7f7f7&text=dummy_banner'>
-        </CardMedia>
+        {/* https://stackoverflow.com/questions/61263669/does-material-ui-have-an-image-component */}
+        <Box
+          component="img"
+          sx={{
+            aspectRatio: { xs: 1546 / 423, md: 1855 / 423, lg: 2560 / 423 },
+            width: "100%",
+            objectFit: "cover",
+            borderRadius: 4
+          }}
+          alt="Channel Art"
+          src='https://github.com/botamochi6277/botalab/assets/14128408/370721be-1e7a-4a28-b45c-0b44ff3ff4db'
+        />
 
         <CircleHead
           title='BotaLab'
           subtitle='@botamochi6277'
-          img='https://dummyimage.com/256x256/2b2bff/f7f7f7&text=B'
+          img='https://avatars.githubusercontent.com/u/14128408?v=4'
           description={"趣味でメイカーとして活動しているbotamochiです. イベントでは個人サークルのBotaLabとして出展しています."}
         />
 
