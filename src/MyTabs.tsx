@@ -22,7 +22,7 @@ export default function MyTabs(
 ) {
   const [tab_id, setTabId] = React.useState('0');
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: string) => {
     setTabId(newValue);
   };
   return (

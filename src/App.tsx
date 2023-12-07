@@ -1,14 +1,11 @@
 import * as React from 'react';
 import {
   Container,
-  Button,
   Box,
   createTheme, ThemeProvider, CssBaseline, Stack
 } from '@mui/material';
 
-// icons
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
+
 // custom
 import ProtoPediaList from './ProtoPediaList';
 import MyAppBar from './MyAppBar';

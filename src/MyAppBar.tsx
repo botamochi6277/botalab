@@ -1,4 +1,4 @@
-import { AppBar, Container, Toolbar, Typography, Avatar, Stack, Button, Switch, Theme } from "@mui/material";
+import { AppBar, Container, Toolbar, Typography, Avatar, Stack, Switch, Theme } from "@mui/material";
 // icons
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
