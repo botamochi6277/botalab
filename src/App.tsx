@@ -9,9 +9,13 @@ import {
 // custom
 import ProtoPediaList from './ProtoPediaList';
 import MyAppBar from './MyAppBar';
-import CircleHead from './CircleHead';
+import TeamHeader from './TeamHeader';
 import ExhibitionTimeline from './ExhibitionTimeline';
 import MyTabs from './MyTabs';
+
+// assets
+import profile from './assets/profile.json'
+
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -48,14 +52,15 @@ function App() {
               borderRadius: 4
             }}
             alt="Channel Art"
-            src='https://github.com/botamochi6277/botalab/assets/14128408/370721be-1e7a-4a28-b45c-0b44ff3ff4db'
+            src={profile.header_image}
           />
 
-          <CircleHead
-            title='BotaLab'
-            subtitle='@botamochi6277'
-            img='https://avatars.githubusercontent.com/u/14128408?v=4'
-            description={"趣味でメイカーとして活動しているbotamochiです. イベントでは個人サークルのBotaLabとして出展しています."}
+          <TeamHeader
+            team_name={profile.team_name}
+            user_name={profile.user_name}
+            avatar_img={profile.avatar_image}
+            description={profile.description}
+            socials={profile.socials}
           />
 
           <MyTabs items={[
