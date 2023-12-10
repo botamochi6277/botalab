@@ -4,25 +4,18 @@ import {
   Card,
   CardContent,
   CardActions,
-  Box,
-  Chip
+  Box, Link
 } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
-// icons
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import ArticleIcon from '@mui/icons-material/Article';
-import ViewInArIcon from '@mui/icons-material/ViewInAr';
-import HexagonIcon from '@mui/icons-material/Hexagon';
 
 export default function CircleHead(props: { title: string, subtitle: string, img: string, description: string | undefined }) {
   const social_items = [
-    { name: "GitHub", to: 'https://github.com/botamochi6277', icon: <GitHubIcon /> },
-    { name: "twitter", to: "https://twitter.com/botamochi6277", icon: <TwitterIcon /> },
-    { name: "Zenn", to: "https://zenn.dev/botamochi6277", icon: <ArticleIcon /> },
-    { name: "GRABCAD", to: "https://grabcad.com/botamochi-1", icon: <ViewInArIcon /> },
-    { name: "Thingiverse", to: "https://www.thingiverse.com/botamochi/designs", icon: <HexagonIcon /> },
+    { name: "GitHub", to: 'https://github.com/botamochi6277', badge: "https://img.shields.io/badge/GitHub-grey?style=for-the-badge&logo=github" },
+    { name: "twitter", to: "https://twitter.com/botamochi6277", badge: "https://img.shields.io/badge/Twitter-grey?style=for-the-badge&logo=twitter" },
+    { name: "Zenn", to: "https://zenn.dev/botamochi6277", badge: "https://img.shields.io/badge/Zenn-grey?style=for-the-badge&logo=zenn" },
+    { name: "GRABCAD", to: "https://grabcad.com/botamochi-1", badge: "https://img.shields.io/badge/GrabCad-grey?style=for-the-badge&logo=grabcad" },
+    { name: "Thingiverse", to: "https://www.thingiverse.com/botamochi/designs", badge: "https://img.shields.io/badge/Thingiverse-grey?style=for-the-badge&logo=thingiverse" },
   ]
   // https://m3.material.io/components/chips/guidelines
   return (
@@ -64,17 +57,27 @@ export default function CircleHead(props: { title: string, subtitle: string, img
 
             <Stack direction={"row"} spacing={1} useFlexGap flexWrap="wrap">
               {social_items.map(item => (
-                <Chip
-                  icon={item.icon}
-                  label={item.name}
-                  key={item.name}
-
+                <Link
                   component="a"
                   href={item.to}
                   target="_blank"
                   rel="noopener"
-                  clickable
-                />
+                >
+                  <Box
+                    component="img"
+                    sx={{
+                      // height: { xs: 24, sm: 24 },
+                      objectFit: "cover",
+                      bgcolor: 'primary.main',
+                      '&:hover': {
+                        opacity: 0.8,
+                      },
+                    }}
+                    alt="Badge"
+                    src={item.badge}
+                    key={item.name}
+                  />
+                </Link>
 
               ))}
             </Stack>
