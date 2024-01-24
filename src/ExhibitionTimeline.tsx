@@ -1,14 +1,14 @@
-import { Typography, Link, Icon } from '@mui/material';
 import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import { Icon, Link, Typography } from '@mui/material';
 
 
-import exhibitions from './assets/exhibitions.json'
+import exhibitions from './assets/exhibitions.json';
 
 export default function ExhibitionTimeline() {
 
@@ -32,6 +32,8 @@ export default function ExhibitionTimeline() {
     )
   }
 
+  // console.log()
+
   const tl_items = items.reverse().map(item => (
     <TimelineItem key={item.name}>
       <TimelineOppositeContent
@@ -44,7 +46,7 @@ export default function ExhibitionTimeline() {
       </TimelineOppositeContent>
       <TimelineSeparator>
         <TimelineConnector />
-        <TimelineDot color="primary">
+        <TimelineDot color={((new Date(item.date).getTime() - new Date().getTime()) > 0) ? "success" : "primary"}>
           <Icon>{item.icon}</Icon>
         </TimelineDot>
         <TimelineConnector />

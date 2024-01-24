@@ -58,7 +58,7 @@
     },
     {
       "date": "2022-11-12",
-      "name": "Tukurogaya 2022",
+      "name": "Tsukurogaya",
       "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
       "link": "",
       "location": "",
@@ -104,6 +104,23 @@
       "icon": "star",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2023",
       "period": ",19"
+    },
+    {
+      "name": "Kariya Micro Maker Faire 2024",
+      "date": "2024-03-02",
+      "location": "産業振興センター あいおいホール",
+      "icon": "star",
+      "link": "https://makezine.jp/event/makerfaire/kmmf2024/",
+      "period": ",03"
+    },
+    {
+      "date": "2024-04-06",
+      "name": "Tsukurogaya 2",
+      "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
+      "link": "https://tsukurogaya.nagoya/",
+      "location": "ヨシヅヤ Yストア 西春店",
+      "icon": "architecture",
+      "period": ",03"
     }
   ]
 }
