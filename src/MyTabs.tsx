@@ -1,13 +1,13 @@
-import * as React from 'react';
-import {
-  Box,
-  Tab
-} from '@mui/material';
 import {
   TabContext,
   TabList,
   TabPanel
 } from '@mui/lab';
+import {
+  Box,
+  Tab
+} from '@mui/material';
+import * as React from 'react';
 
 {/* https://mui.com/material-ui/react-tabs/ */ }
 interface TabPropItem {
@@ -33,7 +33,7 @@ export default function MyTabs(
             {props.items?.map((item, idx) => <Tab label={item.label} key={`tab-${item.label}`} value={`${idx}`} />)}
           </TabList>
         </Box>
-        {props.items?.map((item, idx) => <TabPanel value={`${idx}`}>{item.content}</TabPanel>)}
+        {props.items?.map((item, idx) => <TabPanel value={`${idx}`} key={`tab-${item.label}-panel`}>{item.content}</TabPanel>)}
       </TabContext>
     </Box>
   );

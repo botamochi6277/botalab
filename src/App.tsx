@@ -1,20 +1,22 @@
-import * as React from 'react';
 import {
-  Container,
   Box,
-  createTheme, ThemeProvider, CssBaseline, Stack
+  Container,
+  CssBaseline, Stack,
+  ThemeProvider,
+  createTheme
 } from '@mui/material';
+import * as React from 'react';
 
 
 // custom
-import ProtoPediaList from './ProtoPediaList';
-import MyAppBar from './MyAppBar';
-import TeamHeader from './TeamHeader';
 import ExhibitionTimeline from './ExhibitionTimeline';
+import MyAppBar from './MyAppBar';
 import MyTabs from './MyTabs';
+import ProtoPediaList from './ProtoPediaList';
+import TeamHeader from './TeamHeader';
 
 // assets
-import profile from './assets/profile.json'
+import profile from './assets/profile.json';
 
 
 function App() {
@@ -61,9 +63,10 @@ function App() {
             avatar_img={profile.avatar_image}
             description={profile.description}
             socials={profile.socials}
+            key={"team_header"}
           />
 
-          <MyTabs items={[
+          <MyTabs key={"my_tabs"} items={[
             { label: "ProtoPedia Works", content: <ProtoPediaList /> },
             { label: "Exhibition Timeline", content: <ExhibitionTimeline /> }]}
           />

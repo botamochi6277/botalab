@@ -1,10 +1,12 @@
 // header like youtube channel
 import {
-  Typography, Stack,
+  Box,
   Card,
-  CardContent,
   CardActions,
-  Box, Link
+  CardContent,
+  Link,
+  Stack,
+  Typography
 } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 
@@ -63,6 +65,7 @@ export default function TeamHeader(
                   href={item.link}
                   target="_blank"
                   rel="noopener"
+                  key={`social-${item.name}`}
                 >
                   <Box
                     component="img"
