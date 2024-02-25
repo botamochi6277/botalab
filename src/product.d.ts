@@ -1,5 +1,5 @@
 
-// Protopedia
+// ProtoPedia
 type PrototypeRawData = {
   image1: string,
   image2: string,
@@ -13,7 +13,9 @@ type PrototypeRawData = {
   teamNm: string,
   materialNm: string,
   tags: string,
-  id: number
+  id: number,
+  viewCount: number,
+  goodCount: number,
 }
 
 type PrototypeData = {

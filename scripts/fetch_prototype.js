@@ -1,9 +1,9 @@
 // node  --loader ts-node/esm scripts/fetch_prototype.ts
-import yargs from 'yargs';
-import { hideBin } from "yargs/helpers";
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
+import yargs from 'yargs';
+import { hideBin } from "yargs/helpers";
 
 const args = yargs(hideBin(process.argv))
   .command("* <user_id> <api_key>", "fetch prototype data from ProtoPedia")
@@ -88,7 +88,7 @@ const fetchProjectData = (
 
   const url = `https://protopedia.net/api/prototypes.json?token=${token}&userNm=${username}`
   axios.get(url).then((res) => {
-    // console.debug(res);
+    console.debug(res);
     // protopedia APIの変な挙動
     // 登録されているmaterial+eventの数だけprototype_raw dataが返ってくる...ことがある
     // なんで materialsとかでまとめて返さないのだろうか？？
