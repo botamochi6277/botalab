@@ -17,11 +17,12 @@ import TeamHeader from './TeamHeader';
 
 // assets
 import profile from './assets/profile.json';
-
+import my_theme from './theme';
 
 function App() {
   const [theme, setTheme] = React.useState(
     createTheme({
+      ...my_theme,
       palette: {
         mode: 'dark',
       },
@@ -29,9 +30,9 @@ function App() {
   );
   const toggleTheme = (theme: any) => {
     if (theme.palette.mode === 'dark') {
-      setTheme(createTheme({ palette: { mode: 'light', }, }))
+      setTheme(createTheme({ ...my_theme, palette: { mode: 'light', }, }))
     } else {
-      setTheme(createTheme({ palette: { mode: 'dark', }, }))
+      setTheme(createTheme({ ...my_theme, palette: { mode: 'dark', }, }))
     }
   }
 
