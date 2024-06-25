@@ -92,7 +92,7 @@
     {
       "name": "NT Tokyo 2023",
       "date": "2023-11-04",
-      "location": "科学技術館 催事場2～4",
+      "location": "科学技術館 催事場2~4",
       "icon": "science",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E6%9D%B1%E4%BA%AC2023",
       "period": ",05"
@@ -116,11 +116,20 @@
     {
       "date": "2024-04-06",
       "name": "Tsukurogaya 2",
-      "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
+      "exhibits": "電飾刀(ゲーミング日本刀), ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ, 推しｽﾀｯｸﾁｬﾝ",
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤ Yストア 西春店",
       "icon": "architecture",
       "period": ",03"
+    },
+    {
+      "date": "2024-06-22",
+      "name": "NT Kanazawa 2024",
+      "exhibits": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22024",
+      "location": "金沢駅東もてなしドーム地下広場",
+      "icon": "train",
+      "period": ",23"
     }
   ]
 }
