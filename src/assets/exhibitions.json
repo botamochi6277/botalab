@@ -86,7 +86,7 @@
       "exhibits": "サイボーグヘルメット 折れた電飾刀 Hacka-Tail v4.4 茶鯨 (水道ホース採用版)",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22023",
       "location": "金沢駅東もてなしドーム地下広場",
-      "icon": "train",
+      "icon": "NT_kanazawa_2023_logo.png",
       "period": ""
     },
     {
@@ -128,8 +128,17 @@
       "exhibits": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22024",
       "location": "金沢駅東もてなしドーム地下広場",
-      "icon": "train",
+      "icon": "NT_kanazawa_2024_logo.png",
       "period": ",23"
+    },
+    {
+      "date": "2024-09-07",
+      "name": "NT Tokyo 2024",
+      "exhibits": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
+      "link": "https://nt-tokyo.org/",
+      "location": "科学技術館 イベントホール 2--4",
+      "icon": "NT_tokyo_2024_logo.svg",
+      "period": ",08"
     }
   ]
 }
