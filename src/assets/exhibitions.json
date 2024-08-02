@@ -66,7 +66,7 @@
     },
     {
       "date": "2022-12-03",
-      "name": "Mini Maker Faire Ogaki 2022",
+      "name": "Ogaki Mini Maker Faire 2022",
       "exhibits": "Hacka-Tail v4.3 茶鯨 (XIAO BLE + 新型ケース) Hacka-Tail v4.2 白鯨 (XIAO BLE + 旧型ケース) Hacka-Tail v4w 装着型-黒",
       "link": "",
       "location": "",
@@ -139,6 +139,15 @@
       "location": "科学技術館 イベントホール 2--4",
       "icon": "NT_tokyo_2024_logo.svg",
       "period": ",08"
+    },
+    {
+      "date": "2024-11-23",
+      "name": "Ogaki Mini Maker Faire 2024",
+      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
+      "link": "https://www.iamas.ac.jp/ommf2024/",
+      "location": "ソフトピアジャパンセンター",
+      "icon": "make_logo.svg",
+      "period": ",24"
     }
   ]
 }
