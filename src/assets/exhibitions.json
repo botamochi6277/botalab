@@ -6,7 +6,7 @@
       "exhibits": "CAMROBO++ x1",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2019-12-14",
@@ -14,7 +14,7 @@
       "exhibits": "CAMROBO++ x2",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2020-02-15",
@@ -22,7 +22,7 @@
       "exhibits": "CAMROBO++ b x1 CAMROBO++ x1",
       "link": "",
       "location": "",
-      "icon": "cookie"
+      "icon": "make_logo.svg"
     },
     {
       "date": "2021-06-26",
@@ -30,7 +30,7 @@
       "exhibits": "Hacka-Tail v3 x1 Hacka-Tail v4 x2",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2021-11-26",
@@ -38,7 +38,7 @@
       "exhibits": "Hacka-Tail v4 x2 Hacka-Tail wearable x1",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2022-01-15",
@@ -46,7 +46,7 @@
       "exhibits": "Hacka-Tail v4 鯨(ラビットボア白) Hacka-Tail v4w 装着型-黒電飾脇差(青)",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2022-06-19",
@@ -54,7 +54,7 @@
       "exhibits": "Hacka-Tail v4.1 白鯨 (内部ケースの更新) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2022-11-12",
@@ -70,7 +70,7 @@
       "exhibits": "Hacka-Tail v4.3 茶鯨 (XIAO BLE + 新型ケース) Hacka-Tail v4.2 白鯨 (XIAO BLE + 旧型ケース) Hacka-Tail v4w 装着型-黒",
       "link": "",
       "location": "",
-      "icon": "cookie"
+      "icon": "make_logo.svg"
     },
     {
       "date": "2023-02-04",
@@ -78,7 +78,7 @@
       "exhibits": "Hacka-Tail v4.4 茶鯨 (水道ホース採用版) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1.1 白",
       "link": "",
       "location": "",
-      "icon": "bolt"
+      "icon": "nt_generic.svg"
     },
     {
       "date": "2023-06-17",
@@ -93,7 +93,7 @@
       "name": "NT Tokyo 2023",
       "date": "2023-11-04",
       "location": "科学技術館 催事場2~4",
-      "icon": "science",
+      "icon": "NT_tokyo_2024_logo.svg",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E6%9D%B1%E4%BA%AC2023",
       "period": ",05"
     },
@@ -101,7 +101,7 @@
       "name": "NT Nagoya 2023",
       "date": "2023-11-18",
       "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
-      "icon": "star",
+      "icon": "nt_generic.svg",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2023",
       "period": ",19"
     },
@@ -109,7 +109,7 @@
       "name": "Kariya Micro Maker Faire 2024",
       "date": "2024-03-02",
       "location": "産業振興センター あいおいホール",
-      "icon": "star",
+      "icon": "make_logo.svg",
       "link": "https://makezine.jp/event/makerfaire/kmmf2024/",
       "period": ",03"
     },
@@ -139,6 +139,15 @@
       "location": "科学技術館 イベントホール 2--4",
       "icon": "NT_tokyo_2024_logo.svg",
       "period": ",08"
+    },
+    {
+      "date": "2024-11-09",
+      "name": "NT Nagoya 2024",
+      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2024",
+      "location": "ヨシヅヤ Yストア 西春店",
+      "icon": "nt_generic.svg",
+      "period": ",10"
     },
     {
       "date": "2024-11-23",
