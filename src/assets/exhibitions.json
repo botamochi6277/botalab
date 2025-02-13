@@ -58,7 +58,7 @@
     },
     {
       "date": "2022-11-12",
-      "name": "Tsukurogaya",
+      "name": "つくろがや",
       "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
       "link": "",
       "location": "",
@@ -115,7 +115,7 @@
     },
     {
       "date": "2024-04-06",
-      "name": "Tsukurogaya 2",
+      "name": "つくろがや 2",
       "exhibits": "電飾刀(ゲーミング日本刀), ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ, 推しｽﾀｯｸﾁｬﾝ",
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤ Yストア 西春店",
@@ -157,6 +157,15 @@
       "location": "ソフトピアジャパンセンター",
       "icon": "make_logo.svg",
       "period": ",24"
+    },
+    {
+      "date": "2025-4-12",
+      "name": "つくろがや 3",
+      "exhibits": "電飾刀(ゲーミング日本刀)",
+      "link": "https://tsukurogaya.nagoya/",
+      "location": "ヨシヅヤYストア西春店",
+      "icon": "architecture",
+      "period": ",13"
     }
   ]
 }
