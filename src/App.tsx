@@ -15,6 +15,7 @@ import MyTabs from "./MyTabs";
 import ProtoPediaList from "./ProtoPediaList";
 import TeamHeader from "./TeamHeader";
 import StatsTab from "./StatsTab";
+import NetworkTab from "./NetworkTab";
 
 // assets
 import profile from "./assets/profile.json";
@@ -73,15 +74,24 @@ function App() {
             key={"my_tabs"}
             items={[
               {
-                label: "ProtoPedia Works",
+                label: "Works",
                 content: (
                   <ProtoPediaList prototypes={protopediaData.prototypes} />
                 ),
               },
-              { label: "Exhibition Timeline", content: <ExhibitionTimeline /> },
+              { label: "Exhibitions", content: <ExhibitionTimeline /> },
               {
                 label: "Stats",
                 content: <StatsTab prototypes={protopediaData.prototypes} />,
+              },
+              {
+                label: "Networks",
+                content: (
+                  <NetworkTab
+                    prototypes={protopediaData.prototypes}
+                    palette={theme.palette}
+                  />
+                ),
               },
             ]}
           />

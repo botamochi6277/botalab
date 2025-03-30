@@ -6,8 +6,8 @@ on:
     # nightly build
     # https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule
     # * is a special character in YAML so you have to quote this string
-    # every 15:00 UTC (24:00 JST)
-    - cron: "0 15 * * *"
+    # every 17:00 UTC (02:00 JST)
+    - cron: "0 17 * * *"
 
 jobs:
   paging_jobs:

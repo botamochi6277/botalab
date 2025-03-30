@@ -77,22 +77,22 @@ const ChipsBox = (props: {
   );
 };
 
-const DevelopersTypography = (props: { developers?: string[] }) => {
-  if (!props.developers) {
-    return;
-  }
+// const DevelopersTypography = (props: { developers?: string[] }) => {
+//   if (!props.developers) {
+//     return;
+//   }
 
-  const names = props.developers.map((s) => s.split("@")[0]);
-  return (
-    <Typography
-      variant="subtitle1"
-      component="div"
-      //   sx={{ color: "text.secondary" }}
-    >
-      {names.join(", ")}
-    </Typography>
-  );
-};
+//   const names = props.developers.map((s) => s.split("@")[0]);
+//   return (
+//     <Typography
+//       variant="subtitle1"
+//       component="div"
+//       //   sx={{ color: "text.secondary" }}
+//     >
+//       {names.join(", ")}
+//     </Typography>
+//   );
+// };
 
 const ProtoTypeCard = (props: { prototype: PrototypeV2Data }) => {
   // https://stackoverflow.com/questions/57818778/how-to-make-material-ui-cardactions-always-stick-to-the-bottom-of-parent
