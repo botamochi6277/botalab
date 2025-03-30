@@ -1,67 +1,91 @@
+import * as React from "react";
 // mui
-import {
-  Card, CardContent, CardMedia, CardActionArea,
-  Link,
-  Typography,
-} from '@mui/material';
-import Grid from '@mui/material/Unstable_Grid2';
+import { Box, IconButton, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+
+// icons
+import HistoryIcon from "@mui/icons-material/History";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import UpdateIcon from "@mui/icons-material/Update";
 
 // assets
-import prototypes from "./assets/prototypes.json";
 
-const ProtoTypeCard = (props: {
-  name: string,
-  prototype_id: number,
-  img: string,
-  summary: string
+import ProtoTypeCard from "./PrototypeCard";
+
+const OrderButtons = (props: {
+  currentOrder: string;
+  items: { order: string; icon: React.ReactElement }[];
+  setOrder: (s: string) => void;
 }) => {
-  // https://stackoverflow.com/questions/57818778/how-to-make-material-ui-cardactions-always-stick-to-the-bottom-of-parent
-  // https://stackoverflow.com/questions/55824260/same-height-cards-in-material-ui
-  return (
-    <Card sx={{ flexDirection: "column", height: "100%" }} key={props.prototype_id}>
-      <CardActionArea
-        component={Link}
-        href={`https://protopedia.net/prototype/${props.prototype_id}`}
-        target="_blank"
-        rel="noopener"
+  const buttons = props.items.map((item) => {
+    return (
+      <IconButton
+        key={`btn-${item.order}`}
+        color={item.order === props.currentOrder ? "primary" : "default"}
+        onClick={() => {
+          props.setOrder(item.order);
+        }}
       >
-        <CardMedia
-          component="img"
-          sx={{ height: { xs: 160, sm: 240 }, maxWidth: 600 }}
-          image={props.img}
-          alt="Live from space album cover"
-        />
-        <CardContent >
-          <Typography component="div" variant="h5">
-            {props.name}
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary" component="div"
-            sx={{ display: { xs: "none", sm: "flex" }, justifyContent: "space-between" }}
-          >
-            {props.summary}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        {item.icon}
+      </IconButton>
+    );
+  });
+  return buttons;
+};
+
+export default function ProtoPediaList(props: {
+  prototypes: PrototypeV2Data[];
+}) {
+  const [order, setOrder] = React.useState("views");
+
+  const mySort = (a: PrototypeV2Data, b: PrototypeV2Data, order: string) => {
+    switch (order) {
+      case "ids":
+        return a.id - b.id; // decrease
+      case "views":
+        return b.viewCount - a.viewCount;
+      case "goods":
+        return b.goodCount - a.goodCount;
+      case "updatedDate":
+        return Date.parse(b.updateDate) - Date.parse(a.updateDate);
+      default:
+        return 1;
+    }
+  };
+  const items = props.prototypes
+    .sort((a, b) => mySort(a, b, order))
+    .map((p) => {
+      return <ProtoTypeCard prototype={p} />;
+    });
+
+  return (
+    <Box>
+      <Box sx={{ justifyItems: "right" }}>
+        {/* sorting radio-like buttons */}
+
+        <Typography>
+          Sort by:
+          <OrderButtons
+            currentOrder={order}
+            setOrder={setOrder}
+            items={[
+              { order: "ids", icon: <HistoryIcon /> },
+              { order: "views", icon: <VisibilityIcon /> },
+              { order: "goods", icon: <ThumbUpIcon /> },
+              { order: "updatedDate", icon: <UpdateIcon /> },
+            ]}
+          />{" "}
+        </Typography>
+      </Box>
+
+      <Grid container spacing={2}>
+        {items.map((item, idx) => (
+          <Grid xs={12} sm={6} md={4} key={idx}>
+            {item}
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 }
-
-export default function ProtoPediaList() {
-  const items = prototypes.prototypes.map(
-    p => {
-      const ss = p.images[0].split("/");
-      const img_path = `./prototypes/${ss[ss.length - 1]}`;
-      return (<ProtoTypeCard
-        name={p.name} prototype_id={p.prototype_id}
-        img={img_path} summary={p.summary} key={p.prototype_id}
-      />)
-    }
-  )
-
-  return (
-    <Grid container spacing={2}>
-      {items.map((item, idx) => <Grid xs={12} sm={6} md={4} lg={3} key={idx}>{item}</Grid>)}
-    </Grid>
-  )
-}
-

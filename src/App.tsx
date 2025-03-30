@@ -1,40 +1,42 @@
 import {
   Box,
   Container,
-  CssBaseline, Stack,
+  CssBaseline,
+  Stack,
   ThemeProvider,
-  createTheme
-} from '@mui/material';
-import * as React from 'react';
-
+  createTheme,
+} from "@mui/material";
+import * as React from "react";
 
 // custom
-import ExhibitionTimeline from './ExhibitionTimeline';
-import MyAppBar from './MyAppBar';
-import MyTabs from './MyTabs';
-import ProtoPediaList from './ProtoPediaList';
-import TeamHeader from './TeamHeader';
+import ExhibitionTimeline from "./ExhibitionTimeline";
+import MyAppBar from "./MyAppBar";
+import MyTabs from "./MyTabs";
+import ProtoPediaList from "./ProtoPediaList";
+import TeamHeader from "./TeamHeader";
+import StatsTab from "./StatsTab";
 
 // assets
-import profile from './assets/profile.json';
-import my_theme from './theme';
+import profile from "./assets/profile.json";
+import my_theme from "./theme";
+import protopediaData from "./assets/prototypes_v2.json";
 
 function App() {
   const [theme, setTheme] = React.useState(
     createTheme({
       ...my_theme,
       palette: {
-        mode: 'dark',
+        mode: "dark",
       },
     })
   );
   const toggleTheme = (theme: any) => {
-    if (theme.palette.mode === 'dark') {
-      setTheme(createTheme({ ...my_theme, palette: { mode: 'light', }, }))
+    if (theme.palette.mode === "dark") {
+      setTheme(createTheme({ ...my_theme, palette: { mode: "light" } }));
     } else {
-      setTheme(createTheme({ ...my_theme, palette: { mode: 'dark', }, }))
+      setTheme(createTheme({ ...my_theme, palette: { mode: "dark" } }));
     }
-  }
+  };
 
   // try to create youtube channel top page
   return (
@@ -52,7 +54,7 @@ function App() {
               aspectRatio: { xs: 1546 / 423, md: 1855 / 423, lg: 2560 / 423 },
               width: "100%",
               objectFit: "cover",
-              borderRadius: 4
+              borderRadius: 4,
             }}
             alt="Channel Art"
             src={profile.header_image}
@@ -67,14 +69,26 @@ function App() {
             key={"team_header"}
           />
 
-          <MyTabs key={"my_tabs"} items={[
-            { label: "ProtoPedia Works", content: <ProtoPediaList /> },
-            { label: "Exhibition Timeline", content: <ExhibitionTimeline /> }]}
+          <MyTabs
+            key={"my_tabs"}
+            items={[
+              {
+                label: "ProtoPedia Works",
+                content: (
+                  <ProtoPediaList prototypes={protopediaData.prototypes} />
+                ),
+              },
+              { label: "Exhibition Timeline", content: <ExhibitionTimeline /> },
+              {
+                label: "Stats",
+                content: <StatsTab prototypes={protopediaData.prototypes} />,
+              },
+            ]}
           />
         </Stack>
       </Container>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
