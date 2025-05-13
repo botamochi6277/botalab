@@ -161,11 +161,20 @@
     {
       "date": "2025-4-12",
       "name": "つくろがや 3",
-      "exhibits": "電飾刀(ゲーミング日本刀)",
+      "exhibits": "電飾刀(ゲーミング日本刀), サイボーグ甲冑",
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤYストア西春店",
       "icon": "architecture",
       "period": ",13"
+    },
+    {
+      "date": "2025-6-21",
+      "name": "NT Kanazawa 2025",
+      "exhibits": "",
+      "link": "https://wiki.nicotech.jp/nico_tech/index.php?NT%E9%87%91%E6%B2%A22025",
+      "location": "金沢駅東もてなしドーム地下広場",
+      "icon": "NT_kanazawa_2024_logo.png",
+      "period": ",22"
     }
   ]
 }
