@@ -52,12 +52,12 @@ function App() {
           <Box
             component="img"
             sx={{
-              aspectRatio: { xs: 1546 / 423, md: 1855 / 423, lg: 2560 / 423 },
+              aspectRatio: { xs: 2560 / 423 },
               width: "100%",
               objectFit: "cover",
               borderRadius: 4,
             }}
-            alt="Channel Art"
+            alt="Header Image"
             src={profile.header_image}
           />
 
