@@ -129,16 +129,26 @@
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22024",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2024_logo.png",
-      "period": ",23"
+      "period": ",23",
+      "prototype_ids": [
+        5387,
+        5136,
+        3124
+      ]
     },
     {
       "date": "2024-09-07",
       "name": "NT Tokyo 2024",
-      "exhibits": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
+      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
       "link": "https://nt-tokyo.org/",
       "location": "科学技術館 イベントホール 2--4",
       "icon": "NT_tokyo_2024_logo.svg",
-      "period": ",08"
+      "period": ",08",
+      "prototype_ids": [
+        6097,
+        5136,
+        3124
+      ]
     },
     {
       "date": "2024-11-09",
@@ -147,7 +157,12 @@
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2024",
       "location": "ヨシヅヤ Yストア 西春店",
       "icon": "nt_generic.svg",
-      "period": ",10"
+      "period": ",10",
+      "prototype_ids": [
+        5136,
+        3124,
+        2385
+      ]
     },
     {
       "date": "2024-11-23",
@@ -156,7 +171,12 @@
       "link": "https://www.iamas.ac.jp/ommf2024/",
       "location": "ソフトピアジャパンセンター",
       "icon": "make_logo.svg",
-      "period": ",24"
+      "period": ",24",
+      "prototype_ids": [
+        5136,
+        3124,
+        2385
+      ]
     },
     {
       "date": "2025-4-12",
@@ -165,7 +185,11 @@
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤYストア西春店",
       "icon": "architecture",
-      "period": ",13"
+      "period": ",13",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     },
     {
       "date": "2025-6-21",
@@ -173,8 +197,17 @@
       "exhibits": "",
       "link": "https://wiki.nicotech.jp/nico_tech/index.php?NT%E9%87%91%E6%B2%A22025",
       "location": "金沢駅東もてなしドーム地下広場",
-      "icon": "NT_kanazawa_2024_logo.png",
+      "icon": "NT_kanazawa_2025_logo.png",
       "period": ",22"
+    },
+    {
+      "date": "2025-7-12",
+      "name": "ｽﾀｯｸﾁｬﾝお誕生日会2025",
+      "exhibits": "",
+      "link": "https://connpass.com/event/358954/",
+      "location": "NBF大崎ビル BRIDGE TERMINAL",
+      "icon": "architecture",
+      "period": ""
     }
   ]
 }
