@@ -208,6 +208,24 @@
       "location": "NBF大崎ビル BRIDGE TERMINAL",
       "icon": "architecture",
       "period": ""
+    },
+    {
+      "date": "2025-09-06",
+      "name": "NT Tokyo 2025",
+      "exhibits": "n",
+      "link": "https://twipla.jp/events/648356",
+      "location": "東京都 科学技術館 催事場1~5",
+      "icon": "nt-tokyo-2025_logo.svg",
+      "period": ",07"
+    },
+    {
+      "date": "2025-10-18",
+      "name": "NT Nagoya 2025",
+      "exhibits": "",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2025",
+      "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
+      "icon": "nt_generic.svg",
+      "period": ",19"
     }
   ]
 }
