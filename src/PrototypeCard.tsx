@@ -115,7 +115,7 @@ const ProtoTypeCard = (props: { prototype: PrototypeV2Data }) => {
             component="img"
             sx={{ height: { xs: 160, sm: 240 }, maxWidth: 800 }}
             image={img_path}
-            alt="Live from space album cover"
+            alt="Prototype Feature Image"
           />
         ) : null}
       </CardActionArea>
