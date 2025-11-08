@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir public/prototypes
           echo ${{vars.PROTOPEDIA_USERNAME}} 
-          node scripts/fetch_prototype.js ${{vars.PROTOPEDIA_USERNAME}} ${{secrets.PROTOPEDIA_API_KEY}}
+          node scripts/fetch_prototype_v2.js ${{vars.PROTOPEDIA_USERNAME}} ${{secrets.PROTOPEDIA_API_KEY}}
       - name: build pages
         run: |
           npm run build
