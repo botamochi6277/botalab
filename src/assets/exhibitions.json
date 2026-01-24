@@ -198,7 +198,11 @@
       "link": "https://wiki.nicotech.jp/nico_tech/index.php?NT%E9%87%91%E6%B2%A22025",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2025_logo.png",
-      "period": ",22"
+      "period": ",22",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     },
     {
       "date": "2025-7-12",
@@ -207,7 +211,11 @@
       "link": "https://connpass.com/event/358954/",
       "location": "NBF大崎ビル BRIDGE TERMINAL",
       "icon": "architecture",
-      "period": ""
+      "period": "",
+      "prototype_ids": [
+        5136,
+        3124
+      ]
     },
     {
       "date": "2025-09-06",
@@ -216,7 +224,11 @@
       "link": "https://nt-tokyo.org/",
       "location": "東京都 科学技術館 催事場1~5",
       "icon": "nt-tokyo-2025_logo.svg",
-      "period": ",07"
+      "period": ",07",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     },
     {
       "date": "2025-10-18",
@@ -225,7 +237,11 @@
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2025",
       "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
       "icon": "nt_generic.svg",
-      "period": ",19"
+      "period": ",19",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     },
     {
       "date": "2025-11-02",
@@ -233,7 +249,11 @@
       "exhibits": "",
       "link": "https://twipla.jp/events/648356",
       "location": "ユニオンベース:『Bullet』",
-      "icon": ""
+      "icon": "armor_fes.jpg",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     },
     {
       "date": "2026-01-17",
@@ -242,7 +262,25 @@
       "exhibits": "",
       "link": "https://makezine.jp/event/makerfaire/kmmf2026/",
       "location": "産業振興センター あいおいホール",
-      "icon": "make_logo.svg"
+      "icon": "make_logo.svg",
+      "prototype_ids": [
+        5136,
+        6097,
+        7999
+      ]
+    },
+    {
+      "date": "2026-03-21",
+      "period": "",
+      "name": "NT Kyoto 2026",
+      "exhibits": "",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E4%BA%AC%E9%83%BD2026",
+      "location": "京都市 西院春日幼稚園・春日神社境内",
+      "icon": "nt_generic.svg",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
     }
   ]
 }

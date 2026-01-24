@@ -5,11 +5,20 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import { Icon, Link, Typography, Avatar } from "@mui/material";
+import {
+  Icon,
+  Link,
+  Typography,
+  Avatar,
+  AvatarGroup,
+  Box,
+} from "@mui/material";
 
 import exhibitions from "./assets/exhibitions.json";
 
-export default function ExhibitionTimeline() {
+export default function ExhibitionTimeline(props: {
+  prototypes?: PrototypeV2Data[];
+}) {
   const items = exhibitions.exhibitions;
   // sort
   items.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
@@ -32,7 +41,10 @@ export default function ExhibitionTimeline() {
     );
   };
 
-  // console.log()
+  const getWorksByIds = (ids: number[]) => {
+    if (!props.prototypes) return [];
+    return props.prototypes.filter((p) => ids.includes(p.id));
+  };
 
   const tl_items = items.reverse().map((item) => (
     <TimelineItem key={item.name}>
@@ -54,10 +66,14 @@ export default function ExhibitionTimeline() {
               : "primary"
           }
         >
-          {item.icon.includes(".png") || item.icon.includes(".svg") ? (
-            <Avatar src={item.icon} sx={{ width: 24, height: 24 }} />
+          {item.icon.includes(".png") ||
+          item.icon.includes(".svg") ||
+          item.icon.includes(".jpg") ? (
+            <Avatar src={item.icon} sx={{ width: 36, height: 36 }} />
           ) : (
-            <Icon>{item.icon}</Icon>
+            <Avatar sx={{ width: 36, height: 36, bgcolor: "transparent" }}>
+              <Icon>{item.icon}</Icon>
+            </Avatar>
           )}
         </TimelineDot>
         <TimelineConnector />
@@ -65,6 +81,18 @@ export default function ExhibitionTimeline() {
       <TimelineContent sx={{ py: "12px", px: 2 }}>
         {exhibitionName(item.name, item.link)}
         <Typography>{item.location}</Typography>
+        <Box sx={{ display: "flex", justifyContent: "left", marginTop: 1 }}>
+          <AvatarGroup max={4} spacing="medium">
+            {getWorksByIds(item.prototype_ids || []).map((work) => (
+              <Avatar
+                key={`${item.name}-${work.id}`}
+                alt={work.name}
+                src={work.mainImage}
+                sx={{ width: 48, height: 48 }}
+              />
+            ))}
+          </AvatarGroup>
+        </Box>
       </TimelineContent>
     </TimelineItem>
   ));

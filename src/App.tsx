@@ -79,7 +79,12 @@ function App() {
                   <ProtoPediaList prototypes={protopediaData.prototypes} />
                 ),
               },
-              { label: "Exhibitions", content: <ExhibitionTimeline /> },
+              {
+                label: "Exhibitions",
+                content: (
+                  <ExhibitionTimeline prototypes={protopediaData.prototypes} />
+                ),
+              },
               {
                 label: "Stats",
                 content: <StatsTab prototypes={protopediaData.prototypes} />,
