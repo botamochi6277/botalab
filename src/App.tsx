@@ -17,6 +17,14 @@ import TeamHeader from "./TeamHeader";
 import StatsTab from "./StatsTab";
 import NetworkTab from "./NetworkTab";
 
+// icons
+import {
+  Event as EventIcon,
+  QueryStats as QueryStatsIcon,
+  Collections as CollectionsIcon,
+  Hub as HubIcon,
+} from "@mui/icons-material";
+
 // assets
 import profile from "./assets/profile.json";
 import my_theme from "./theme";
@@ -74,22 +82,26 @@ function App() {
             key={"my_tabs"}
             items={[
               {
+                icon: <CollectionsIcon fontSize="small" />,
                 label: "Works",
                 content: (
                   <ProtoPediaList prototypes={protopediaData.prototypes} />
                 ),
               },
               {
+                icon: <EventIcon fontSize="small" />,
                 label: "Exhibitions",
                 content: (
                   <ExhibitionTimeline prototypes={protopediaData.prototypes} />
                 ),
               },
               {
+                icon: <QueryStatsIcon fontSize="small" />,
                 label: "Stats",
                 content: <StatsTab prototypes={protopediaData.prototypes} />,
               },
               {
+                icon: <HubIcon fontSize="small" />,
                 label: "Networks",
                 content: (
                   <NetworkTab
