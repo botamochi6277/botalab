@@ -4,7 +4,10 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { BarChart } from "@mui/x-charts/BarChart";
 
-const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
+// local data
+import exhibitionsData from "./assets/exhibitions.json";
+
+const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
   const createdYears = props.prototypes.map((obj) => {
     const date = new Date(obj.createDate);
     return date.getFullYear();
@@ -16,7 +19,8 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
   //     return prev;
   //   }, {});
 
-  const minYear = Math.min(...createdYears);
+  // const minYear = Math.min(...createdYears);
+  const minYear = 2019; // NOTE: to align with event chart
   const maxYear = Math.max(...createdYears);
 
   const years = Array.from(
@@ -30,7 +34,7 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
     <Card>
       <CardContent>
         <Typography component="div" variant="h6">
-          Trends
+          Publication trends
         </Typography>
         <LineChart
           xAxis={[
@@ -38,9 +42,65 @@ const TrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
               data: years,
               label: "years",
               tickLabelInterval: (y, _) => years.includes(y),
+              valueFormatter: (value: number) => value.toString(),
             },
           ]}
-          yAxis={[{ label: "#created" }]}
+          yAxis={[{ label: "#published to ProtoPedia" }]}
+          series={[
+            {
+              curve: "linear",
+              data: counts,
+            },
+          ]}
+          //   width={500}
+          height={200}
+        />
+      </CardContent>
+    </Card>
+  );
+};
+
+const EventTrendChartCard = () => {
+  const exhibitions = exhibitionsData.exhibitions;
+  const eventYears = exhibitions.map((obj) => {
+    const date = new Date(obj.date);
+    return date.getFullYear();
+  });
+
+  //   count year https://qiita.com/saka212/items/408bb17dddefc09004c8
+  //   const count = eventYears.reduce(function (prev, current) {
+  //     prev[current] = (prev[current] || 0) + 1;
+  //     return prev;
+  //   }, {});
+
+  const minYear = Math.min(...eventYears);
+  const maxYear = Math.max(...eventYears);
+
+  const years = Array.from(
+    { length: maxYear - minYear + 1 },
+    (_, idx) => minYear + idx
+  );
+
+  const counts = years.map((year) => {
+    return eventYears.filter((y) => y === year).length;
+  });
+
+  return (
+    <Card>
+      <CardContent>
+        <Typography component="div" variant="h6">
+          Event trends
+        </Typography>
+        <LineChart
+          xAxis={[
+            {
+              data: years,
+              label: "years",
+              tickLabelInterval: (y, _) => years.includes(y),
+              valueFormatter: (value: number) => value.toString(),
+            },
+          ]}
+          yAxis={[{ label: "#events" }]}
           series={[
             {
               curve: "linear",
@@ -110,6 +170,14 @@ const MaterialsCard = (props: {
               label: `#${props.target}s`,
             },
           ]}
+          xAxis={[
+            {
+              tickLabelInterval: (value, _) => {
+                return value % 1 === 0;
+              },
+              valueFormatter: (value: number) => value.toFixed(0),
+            },
+          ]}
           yAxis={[
             {
               data: plotItems.map((item) => item.name),
@@ -128,13 +196,13 @@ const MaterialsCard = (props: {
 const StatsTab = (props: { prototypes: PrototypeV2Data[] }) => {
   return (
     <Box>
-      <TrendChartCard prototypes={props.prototypes} />
+      <PublishedTrendChartCard prototypes={props.prototypes} />
+      <EventTrendChartCard />
       <MaterialsCard
         prototypes={props.prototypes}
         target="material"
         minCounts={2}
       />
-
       <MaterialsCard prototypes={props.prototypes} target="tag" minCounts={2} />
     </Box>
   );
