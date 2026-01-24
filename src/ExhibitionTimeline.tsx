@@ -69,7 +69,11 @@ export default function ExhibitionTimeline(props: {
           {item.icon.includes(".png") ||
           item.icon.includes(".svg") ||
           item.icon.includes(".jpg") ? (
-            <Avatar src={item.icon} sx={{ width: 36, height: 36 }} />
+            <Box
+              component="img"
+              src={item.icon}
+              sx={{ width: 36, height: 36, borderRadius: 8 }}
+            />
           ) : (
             <Avatar sx={{ width: 36, height: 36, bgcolor: "transparent" }}>
               <Icon>{item.icon}</Icon>
@@ -88,7 +92,7 @@ export default function ExhibitionTimeline(props: {
                 key={`${item.name}-${work.id}`}
                 alt={work.name}
                 src={work.mainImage}
-                sx={{ width: 48, height: 48 }}
+                sx={{ width: 36, height: 36 }}
               />
             ))}
           </AvatarGroup>

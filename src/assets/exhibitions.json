@@ -3,91 +3,134 @@
     {
       "date": "2019-09-21",
       "name": "NT Nagoya 2019",
-      "exhibits": "CAMROBO++ x1",
+      "note": "CAMROBO++ x1",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        4980
+      ]
     },
     {
       "date": "2019-12-14",
       "name": "NT Kaga 2019",
-      "exhibits": "CAMROBO++ x2",
+      "note": "CAMROBO++ x2",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        4980
+      ]
     },
     {
       "date": "2020-02-15",
       "name": "Tsukuba Mini Maker Faire 2020",
-      "exhibits": "CAMROBO++ b x1 CAMROBO++ x1",
-      "link": "",
-      "location": "",
-      "icon": "make_logo.svg"
+      "note": "CAMROBO++ b x1 CAMROBO++ x1",
+      "link": "https://tmmf.jp/2020/",
+      "location": "つくばカピオ",
+      "icon": "make_logo.svg",
+      "period": "",
+      "prototype_ids": [
+        4980
+      ]
     },
     {
       "date": "2021-06-26",
       "name": "NT Kanazawa 2021",
-      "exhibits": "Hacka-Tail v3 x1 Hacka-Tail v4 x2",
+      "note": "Hacka-Tail v3 x1 Hacka-Tail v4 x2",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        2385
+      ]
     },
     {
       "date": "2021-11-26",
       "name": "NT Sabae 2021",
-      "exhibits": "Hacka-Tail v4 x2 Hacka-Tail wearable x1",
+      "note": "Hacka-Tail v4 x2 Hacka-Tail wearable x1",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        2385
+      ]
     },
     {
       "date": "2022-01-15",
       "name": "NT Kaga 2022 (New Year)",
-      "exhibits": "Hacka-Tail v4 鯨(ラビットボア白) Hacka-Tail v4w 装着型-黒電飾脇差(青)",
+      "note": "Hacka-Tail v4 鯨(ラビットボア白) Hacka-Tail v4w 装着型-黒電飾脇差(青)",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "prototype_ids": [
+        2385,
+        2361
+      ]
     },
     {
       "date": "2022-06-19",
       "name": "NT Kanazawa 2022",
-      "exhibits": "Hacka-Tail v4.1 白鯨 (内部ケースの更新) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1",
+      "note": "Hacka-Tail v4.1 白鯨 (内部ケースの更新) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "prototype_ids": [
+        2385,
+        3124
+      ]
     },
     {
       "date": "2022-11-12",
-      "name": "つくろがや",
-      "exhibits": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
+      "name": "つくろがや！",
+      "note": "Hacka-Tail v4.1 白鯨 Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1 白",
       "link": "",
       "location": "",
-      "icon": "architecture"
+      "icon": "tsukurogaya.jpg",
+      "prototype_ids": [
+        2385,
+        3124
+      ]
     },
     {
       "date": "2022-12-03",
       "name": "Ogaki Mini Maker Faire 2022",
-      "exhibits": "Hacka-Tail v4.3 茶鯨 (XIAO BLE + 新型ケース) Hacka-Tail v4.2 白鯨 (XIAO BLE + 旧型ケース) Hacka-Tail v4w 装着型-黒",
+      "note": "Hacka-Tail v4.3 茶鯨 (XIAO BLE + 新型ケース) Hacka-Tail v4.2 白鯨 (XIAO BLE + 旧型ケース) Hacka-Tail v4w 装着型-黒",
       "link": "",
       "location": "",
-      "icon": "make_logo.svg"
+      "icon": "make_logo.svg",
+      "prototype_ids": [
+        2385
+      ]
     },
     {
       "date": "2023-02-04",
       "name": "NT Kaga 2023",
-      "exhibits": "Hacka-Tail v4.4 茶鯨 (水道ホース採用版) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1.1 白",
+      "note": "Hacka-Tail v4.4 茶鯨 (水道ホース採用版) Hacka-Tail v4w 装着型-黒 電飾刀(ゲーミング日本刀) v1.1.1 白",
       "link": "",
       "location": "",
-      "icon": "nt_generic.svg"
+      "icon": "nt_generic.svg",
+      "prototype_ids": [
+        2385,
+        3124
+      ]
     },
     {
       "date": "2023-06-17",
       "name": "NT Kanazawa 2023",
-      "exhibits": "サイボーグヘルメット 折れた電飾刀 Hacka-Tail v4.4 茶鯨 (水道ホース採用版)",
+      "note": "サイボーグヘルメット 折れた電飾刀 Hacka-Tail v4.4 茶鯨 (水道ホース採用版)",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22023",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2023_logo.png",
-      "period": ""
+      "period": "",
+      "prototype_ids": [
+        2385,
+        3124
+      ]
     },
     {
       "name": "NT Tokyo 2023",
@@ -111,21 +154,28 @@
       "location": "産業振興センター あいおいホール",
       "icon": "make_logo.svg",
       "link": "https://makezine.jp/event/makerfaire/kmmf2024/",
-      "period": ",03"
+      "period": ",03",
+      "prototype_ids": [
+        3124
+      ]
     },
     {
       "date": "2024-04-06",
-      "name": "つくろがや 2",
-      "exhibits": "電飾刀(ゲーミング日本刀), ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ, 推しｽﾀｯｸﾁｬﾝ",
+      "name": "つくろがや！ 2",
+      "note": "電飾刀(ゲーミング日本刀), ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ, 推しｽﾀｯｸﾁｬﾝ",
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤ Yストア 西春店",
-      "icon": "architecture",
-      "period": ",03"
+      "icon": "tsukurogaya.jpg",
+      "period": ",03",
+      "prototype_ids": [
+        5136,
+        3124
+      ]
     },
     {
       "date": "2024-06-22",
       "name": "NT Kanazawa 2024",
-      "exhibits": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
+      "note": "サイボーグヘルメット, 電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22024",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2024_logo.png",
@@ -139,7 +189,7 @@
     {
       "date": "2024-09-07",
       "name": "NT Tokyo 2024",
-      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
+      "note": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ",
       "link": "https://nt-tokyo.org/",
       "location": "科学技術館 イベントホール 2--4",
       "icon": "NT_tokyo_2024_logo.svg",
@@ -153,7 +203,7 @@
     {
       "date": "2024-11-09",
       "name": "NT Nagoya 2024",
-      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
+      "note": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2024",
       "location": "ヨシヅヤ Yストア 西春店",
       "icon": "nt_generic.svg",
@@ -167,7 +217,7 @@
     {
       "date": "2024-11-23",
       "name": "Ogaki Mini Maker Faire 2024",
-      "exhibits": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
+      "note": "電飾刀(ゲーミング日本刀),推しｽﾀｯｸﾁｬﾝ,Hackatail",
       "link": "https://www.iamas.ac.jp/ommf2024/",
       "location": "ソフトピアジャパンセンター",
       "icon": "make_logo.svg",
@@ -180,11 +230,11 @@
     },
     {
       "date": "2025-4-12",
-      "name": "つくろがや 3",
-      "exhibits": "電飾刀(ゲーミング日本刀), サイボーグ甲冑",
+      "name": "つくろがや！ 3",
+      "note": "電飾刀(ゲーミング日本刀), サイボーグ甲冑",
       "link": "https://tsukurogaya.nagoya/",
       "location": "ヨシヅヤYストア西春店",
-      "icon": "architecture",
+      "icon": "tsukurogaya.jpg",
       "period": ",13",
       "prototype_ids": [
         5387,
@@ -194,7 +244,7 @@
     {
       "date": "2025-6-21",
       "name": "NT Kanazawa 2025",
-      "exhibits": "",
+      "note": "",
       "link": "https://wiki.nicotech.jp/nico_tech/index.php?NT%E9%87%91%E6%B2%A22025",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2025_logo.png",
@@ -207,7 +257,7 @@
     {
       "date": "2025-7-12",
       "name": "ｽﾀｯｸﾁｬﾝお誕生日会2025",
-      "exhibits": "",
+      "note": "",
       "link": "https://connpass.com/event/358954/",
       "location": "NBF大崎ビル BRIDGE TERMINAL",
       "icon": "architecture",
@@ -220,7 +270,7 @@
     {
       "date": "2025-09-06",
       "name": "NT Tokyo 2025",
-      "exhibits": "",
+      "note": "",
       "link": "https://nt-tokyo.org/",
       "location": "東京都 科学技術館 催事場1~5",
       "icon": "nt-tokyo-2025_logo.svg",
@@ -233,7 +283,7 @@
     {
       "date": "2025-10-18",
       "name": "NT Nagoya 2025",
-      "exhibits": "",
+      "note": "",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2025",
       "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
       "icon": "nt_generic.svg",
@@ -246,7 +296,7 @@
     {
       "date": "2025-11-02",
       "name": "Armor Fes 2025",
-      "exhibits": "",
+      "note": "",
       "link": "https://twipla.jp/events/648356",
       "location": "ユニオンベース:『Bullet』",
       "icon": "armor_fes.jpg",
@@ -259,7 +309,7 @@
       "date": "2026-01-17",
       "period": ",18",
       "name": "Kariya Micro Maker Faire 2026",
-      "exhibits": "",
+      "note": "",
       "link": "https://makezine.jp/event/makerfaire/kmmf2026/",
       "location": "産業振興センター あいおいホール",
       "icon": "make_logo.svg",
@@ -273,10 +323,23 @@
       "date": "2026-03-21",
       "period": "",
       "name": "NT Kyoto 2026",
-      "exhibits": "",
+      "note": "",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E4%BA%AC%E9%83%BD2026",
       "location": "京都市 西院春日幼稚園・春日神社境内",
       "icon": "nt_generic.svg",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "name": "つくろがや！ 4",
+      "note": "電飾刀(ゲーミング日本刀), サイボーグ甲冑",
+      "link": "https://tsukurogaya.nagoya/",
+      "location": "ヨシヅヤYストア西春店",
+      "icon": "tsukurogaya.jpg",
+      "period": ",10",
       "prototype_ids": [
         5387,
         3124
