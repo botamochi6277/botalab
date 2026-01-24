@@ -14,35 +14,26 @@ import {
 type LayoutName = "random" | "circle" | "concentric" | "grid" | "cose";
 
 import CytoscapeComponent from "react-cytoscapejs";
-const MaterialNetwork = (props: {
+
+const MaterialTagNetwork = (props: {
   prototypes: PrototypeV2Data[];
-  target: "material" | "event" | "tag" | "developer";
   palette: Palette;
 }) => {
   const [layout, setLayout] = React.useState<LayoutName>("cose");
-  const getter = (p: PrototypeV2Data) => {
-    switch (props.target) {
-      case "event":
-        return p.events;
-      case "tag":
-        return p.tags;
-      case "developer":
-        return p.developers;
 
-      default:
-        return p.materials;
-    }
-  };
-  const allMaterials = props.prototypes.reduce((prev, next) => {
-    if (!getter(next)) {
-      return prev;
-    }
+  // materials and tags
+  const allKeywords = props.prototypes.reduce((prev, next) => {
+    var tags = next.tags ? next.tags.map((t) => `#${t}`) : [];
+    var materials = next.materials ?? [];
 
-    return prev.concat(getter(next) ?? []);
+    return prev.concat(tags.concat(materials));
   }, [] as string[]);
-  const uniqueMaterials = Array.from(new Set(allMaterials));
-  const materialNodes = uniqueMaterials.map((mat) => {
-    return { data: { id: mat, name: mat.split("@")[0] }, classes: "material" };
+  const uniqueKeywords = Array.from(new Set(allKeywords));
+  const keywordNodes = uniqueKeywords.map((keyword) => {
+    return {
+      data: { id: keyword, name: keyword.split("@")[0] },
+      classes: keyword[0] === "#" ? "tag" : "material",
+    };
   });
   const nodes = props.prototypes.map((prototype) => {
     return {
@@ -53,7 +44,9 @@ const MaterialNetwork = (props: {
   }) as any[];
 
   const edges = props.prototypes.reduce((prev, next) => {
-    const tmp = getter(next);
+    var tags = next.tags ? next.tags.map((t) => `#${t}`) : [];
+    var materials = next.materials ?? [];
+    const tmp = materials.concat(tags);
     if (!tmp) {
       return prev;
     }
@@ -67,7 +60,7 @@ const MaterialNetwork = (props: {
     return prev.concat(tmpEdges);
   }, [] as any[]);
 
-  const elements = nodes.concat(materialNodes).concat(edges);
+  const elements = nodes.concat(keywordNodes).concat(edges);
 
   // https://github.com/cytoscape/cytoscape.js/tree/master/documentation/demos/images-breadthfirst-layout
   const nodeStyle = props.prototypes.map((prototype) => {
@@ -84,16 +77,28 @@ const MaterialNetwork = (props: {
     };
   });
 
+  // network stylesheet
   const stylesheet = [
     {
       selector: ".material",
       css: {
         content: "data(name)",
         "text-valign": "center",
-        color: "white",
+        color: props.palette.text.primary,
         "text-outline-width": 2,
-        "text-outline-color": "#888",
-        "background-color": "#888",
+        "text-outline-color": props.palette.primary.dark,
+        "background-color": props.palette.primary.dark,
+      },
+    },
+    {
+      selector: ".tag",
+      css: {
+        content: "data(name)",
+        "text-valign": "center",
+        color: props.palette.text.secondary,
+        "text-outline-width": 2,
+        "text-outline-color": props.palette.secondary.dark,
+        "background-color": props.palette.secondary.dark,
       },
     },
     {
@@ -115,7 +120,7 @@ const MaterialNetwork = (props: {
     <Card>
       <CardContent>
         <Typography component="div" variant="h6">
-          {`${props.target[0].toUpperCase()}${props.target.slice(1)}s`}
+          Material and Tag Network
         </Typography>
         <Box sx={{ border: 2, borderColor: "secondary" }}>
           <CytoscapeComponent
@@ -155,14 +160,10 @@ const NetworkTab = (props: {
   return (
     <Box>
       <Stack direction={"column"} spacing={1}>
-        {["event", "material", "tag", "developer"].map((s) => (
-          <MaterialNetwork
-            key={`network-${s}`}
-            prototypes={props.prototypes}
-            target={s as "material" | "event" | "tag" | "developer"}
-            palette={props.palette}
-          />
-        ))}
+        <MaterialTagNetwork
+          prototypes={props.prototypes}
+          palette={props.palette}
+        />
       </Stack>
     </Box>
   );
