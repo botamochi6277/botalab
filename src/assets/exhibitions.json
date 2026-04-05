@@ -344,6 +344,18 @@
         5387,
         3124
       ]
+    },
+    {
+      "date": "2026-04-27",
+      "name": "M5 Japan Tour 2026 Spring Nagoya",
+      "link": "https://m5stack.connpass.com/event/389541/",
+      "icon": "M5",
+      "location": "STATION Ai",
+      "prototype_ids": [
+        5136,
+        6097,
+        7999
+      ]
     }
   ]
 }
