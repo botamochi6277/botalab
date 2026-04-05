@@ -1,7 +1,6 @@
 import * as React from "react";
 // mui
-import { Box, IconButton, Typography } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import { Box, IconButton, Typography, Grid } from "@mui/material";
 
 // icons
 import HistoryIcon from "@mui/icons-material/History";
@@ -78,10 +77,9 @@ export default function ProtoPediaList(props: {
           />{" "}
         </Typography>
       </Box>
-
       <Grid container spacing={2}>
         {items.map((item, idx) => (
-          <Grid xs={12} sm={6} md={4} key={idx}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
             {item}
           </Grid>
         ))}
