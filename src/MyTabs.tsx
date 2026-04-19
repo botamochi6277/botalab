@@ -1,15 +1,17 @@
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Box, Tab } from "@mui/material";
 import * as React from "react";
+import { ReactNode } from "react";
 
 {
   /* https://mui.com/material-ui/react-tabs/ */
 }
 interface TabPropItem {
-  icon?: JSX.Element;
+  icon?: string | React.ReactElement<unknown>;
   label?: string;
-  content?: JSX.Element;
+  content?: ReactNode;
 }
+
 export default function MyTabs(props: { items?: TabPropItem[] }) {
   const [tab_id, setTabId] = React.useState("0");
 
