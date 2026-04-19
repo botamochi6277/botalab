@@ -53,7 +53,7 @@ const MyAppBar = (props: {
             <GitHubIcon />
           </Link> */}
 
-          <Stack direction="row" spacing={0.5} alignItems="center">
+          <Stack direction="row" spacing={0.5}>
             <LightModeIcon />
             <Switch
               checked={props.theme.palette.mode === "dark"}

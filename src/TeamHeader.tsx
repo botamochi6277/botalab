@@ -64,7 +64,7 @@ export default function TeamHeader(props: {
           </CardContent>
 
           <CardActions>
-            <Stack direction={"row"} spacing={1} useFlexGap flexWrap="wrap">
+            <Stack direction={"row"} spacing={1} useFlexGap>
               {props.socials.map((item) => (
                 <Link
                   component="a"

@@ -19,9 +19,8 @@ const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
   //     return prev;
   //   }, {});
 
-  // const minYear = Math.min(...createdYears);
   const minYear = 2019; // NOTE: to align with event chart
-  const maxYear = Math.max(...createdYears);
+  const maxYear = new Date().getFullYear(); // current year
 
   const years = Array.from(
     { length: maxYear - minYear + 1 },
@@ -36,6 +35,10 @@ const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
         <Typography component="div" variant="h6">
           Publication trends
         </Typography>
+        <Typography variant="caption" color="text.secondary">
+          The number of prototypes published to ProtoPedia each year. Note that
+          the data for the current year may be incomplete.
+        </Typography>
         <LineChart
           xAxis={[
             {
@@ -43,6 +46,7 @@ const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
               label: "years",
               tickLabelInterval: (y, _) => years.includes(y),
               valueFormatter: (value: number) => value.toString(),
+              height: 60,
             },
           ]}
           yAxis={[{ label: "#published" }]}
@@ -50,9 +54,9 @@ const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
             {
               curve: "linear",
               data: counts,
+              showMark: true,
             },
           ]}
-          //   width={500}
           height={200}
         />
       </CardContent>
@@ -98,6 +102,7 @@ const EventTrendChartCard = () => {
               label: "years",
               tickLabelInterval: (y, _) => years.includes(y),
               valueFormatter: (value: number) => value.toString(),
+              height: 60,
             },
           ]}
           yAxis={[{ label: "#events" }]}
@@ -105,9 +110,10 @@ const EventTrendChartCard = () => {
             {
               curve: "linear",
               data: counts,
+              showMark: true,
             },
           ]}
-          // height={200}
+          height={200}
         />
       </CardContent>
     </Card>
@@ -165,7 +171,6 @@ const MaterialsCard = (props: {
           series={[
             {
               data: plotItems.map((item) => item.counts),
-              label: `#${props.target}s`,
             },
           ]}
           xAxis={[
@@ -174,6 +179,8 @@ const MaterialsCard = (props: {
                 return value % 1 === 0;
               },
               valueFormatter: (value: number) => value.toFixed(0),
+              label: `#${props.target}s`,
+              height: 60,
             },
           ]}
           yAxis={[
@@ -202,21 +209,6 @@ const StatsTab = (props: { prototypes: PrototypeV2Data[] }) => {
         minCounts={2}
       />
       <MaterialsCard prototypes={props.prototypes} target="tag" minCounts={2} />
-      <LineChart
-        xAxis={[
-          {
-            data: [1, 2, 3, 5, 8, 10],
-            label: "x",
-            tickLabelPlacement: "middle",
-          },
-        ]}
-        series={[
-          {
-            data: [2, 5.5, 2, 8.5, 1.5, 5],
-          },
-        ]}
-        height={300}
-      />
     </Box>
   );
 };
