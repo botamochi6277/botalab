@@ -349,12 +349,25 @@
       "date": "2026-04-27",
       "name": "M5 Japan Tour 2026 Spring Nagoya",
       "link": "https://m5stack.connpass.com/event/389541/",
-      "icon": "M5",
+      "icon": "m5stack.svg",
       "location": "STATION Ai",
       "prototype_ids": [
         5136,
         6097,
         7999
+      ]
+    },
+    {
+      "date": "2026-6-27",
+      "name": "NT Kanazawa 2026",
+      "note": "",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22026",
+      "location": "金沢駅東もてなしドーム地下広場",
+      "icon": "NT_kanazawa_2025_logo.png",
+      "period": ",28",
+      "prototype_ids": [
+        5387,
+        3124
       ]
     }
   ]
