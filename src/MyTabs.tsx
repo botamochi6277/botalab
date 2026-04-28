@@ -1,5 +1,4 @@
-import { TabContext, TabList, TabPanel } from "@mui/lab";
-import { Box, Tab } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 import * as React from "react";
 import { ReactNode } from "react";
 
@@ -12,34 +11,63 @@ interface TabPropItem {
   content?: ReactNode;
 }
 
-export default function MyTabs(props: { items?: TabPropItem[] }) {
-  const [tab_id, setTabId] = React.useState("0");
+interface TabPanelProps {
+  children?: React.ReactNode;
+  index: number;
+  value: number;
+}
 
-  const handleChange = (_: React.SyntheticEvent, newValue: string) => {
+function CustomTabPanel(props: TabPanelProps) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box>{children}</Box>}
+    </div>
+  );
+}
+
+export default function MyTabs(props: { items?: TabPropItem[] }) {
+  const [tab_id, setTabId] = React.useState(0);
+
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setTabId(newValue);
   };
+
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
-      <TabContext value={tab_id}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
-            {props.items?.map((item, idx) => (
-              <Tab
-                icon={item.icon}
-                label={item.label}
-                key={`tab-${item.label}`}
-                value={`${idx}`}
-                iconPosition="start"
-              />
-            ))}
-          </TabList>
-        </Box>
-        {props.items?.map((item, idx) => (
-          <TabPanel value={`${idx}`} key={`tab-${item.label}-panel`}>
-            {item.content}
-          </TabPanel>
-        ))}
-      </TabContext>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons="auto"
+          value={tab_id}
+          allowScrollButtonsMobile
+        >
+          {props.items?.map((item, idx) => (
+            <Tab
+              id={`simple-tab-${idx}`}
+              aria-controls={`simple-tabpanel-${idx}`}
+              icon={item.icon}
+              label={item.label}
+              key={`tab-${item.label}`}
+              value={idx}
+              iconPosition="start"
+            />
+          ))}
+        </Tabs>
+      </Box>
+      {props.items?.map((item, idx) => (
+        <CustomTabPanel value={tab_id} index={idx}>
+          {item.content}
+        </CustomTabPanel>
+      ))}
     </Box>
   );
 }
