@@ -360,11 +360,37 @@
     {
       "date": "2026-6-27",
       "name": "NT Kanazawa 2026",
-      "note": "",
+      "note": "https://note.com/botamochi6277/n/n0be00d1e6a1c",
       "link": "https://wiki.nicotech.jp/nico_tech/?NT%E9%87%91%E6%B2%A22026",
       "location": "金沢駅東もてなしドーム地下広場",
       "icon": "NT_kanazawa_2025_logo.png",
       "period": ",28",
+      "prototype_ids": [
+        5136,
+        5387,
+        3124
+      ]
+    },
+    {
+      "date": "2026-9-12",
+      "name": "OSUコス 2026",
+      "note": "",
+      "link": "https://tv-aichi.co.jp/osucos/",
+      "location": "愛知県 名古屋市中区大須一帯",
+      "icon": "hexagon",
+      "period": ",28",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
+    },
+    {
+      "date": "2026-11-22",
+      "name": "Armor Fes 2026",
+      "note": "",
+      "link": "https://twipla.jp/events/710424",
+      "location": "ユニオンベース:『Bullet』",
+      "icon": "armor_fes.jpg",
       "prototype_ids": [
         5387,
         3124

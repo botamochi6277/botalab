@@ -1,5 +1,7 @@
 # BotaLab Profile Page (Template of Maker Page Generator)
 
+[![jobs to build and deploy pages](https://github.com/botamochi6277/botalab/actions/workflows/pages.yml/badge.svg)](https://github.com/botamochi6277/botalab/actions/workflows/pages.yml)
+
 This is template to deploy a maker profile page
 
 ## Widgets
