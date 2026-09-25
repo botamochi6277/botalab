@@ -385,6 +385,20 @@
       ]
     },
     {
+      "date": "2026-10-03",
+      "name": "NT Tokyo 2026",
+      "note": "",
+      "link": "https://nt-tokyo.org/",
+      "location": "東京都 科学技術館 催事場7~11",
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        5136,
+        5387,
+        3124
+      ]
+    },
+    {
       "date": "2026-11-22",
       "name": "Armor Fes 2026",
       "note": "",
