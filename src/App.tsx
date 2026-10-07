@@ -12,7 +12,6 @@ import * as React from "react";
 import ExhibitionTimeline from "./ExhibitionTimeline";
 import MyAppBar from "./MyAppBar";
 import MyTabs from "./MyTabs";
-import ProtoPediaList from "./ProtoPediaList";
 import TeamHeader from "./TeamHeader";
 import StatsTab from "./StatsTab";
 import NetworkTab from "./NetworkTab";
@@ -24,7 +23,6 @@ import { matchProjectId, usePath } from "./router";
 import {
   Event as EventIcon,
   QueryStats as QueryStatsIcon,
-  Collections as CollectionsIcon,
   Hub as HubIcon,
   AccountTree as AccountTreeIcon,
 } from "@mui/icons-material";
@@ -98,17 +96,7 @@ function App() {
                 icon: <AccountTreeIcon fontSize="small" />,
                 label: "Projects",
                 content: (
-                  <ProjectTab
-                    projects={projectsData.projects}
-                    works={worksData.works}
-                  />
-                ),
-              },
-              {
-                icon: <CollectionsIcon fontSize="small" />,
-                label: "Prototypes",
-                content: (
-                  <ProtoPediaList prototypes={protopediaData.prototypes} />
+                  <ProjectTab projects={projectsData.projects} />
                 ),
               },
               {

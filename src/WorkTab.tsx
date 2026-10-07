@@ -4,10 +4,11 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
+  Dialog,
   Grid,
-  Link,
   Typography,
 } from "@mui/material";
+import * as React from "react";
 import { ChipRow } from "./ProjectTab";
 
 // icons
@@ -17,41 +18,71 @@ import EventIcon from "@mui/icons-material/Event";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
-export const WorkCard =(props: { work: WorkData; project?: ProjectData }) => {
-  const { work, project } = props;
-  const img_path = work.mainImage ?? null;
+export const WorkCard = (props: {
+  work: WorkData;
+  project?: ProjectData;
+  horizontal?: boolean;
+}) => {
+  const { work, project, horizontal } = props;
+  // bare file names (e.g. "sazanami.jpg") live in public/works; URLs are used as is
+  const img_path = work.mainImage
+    ? /^(https?:)?\/\//.test(work.mainImage) || work.mainImage.startsWith("/")
+      ? work.mainImage
+      : `/works/${work.mainImage}`
+    : null;
   const description = work.description ?? project?.description;
-  const href = project?.protopedia_id
-    ? `https://protopedia.net/prototype/${project.protopedia_id}`
-    : undefined;
+  const [open, setOpen] = React.useState(false);
 
   return (
-    <Card sx={{ flexDirection: "column", height: "100%" }}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: horizontal ? { xs: "column", sm: "row" } : "column",
+        height: "100%",
+      }}
+    >
       {img_path ? (
         <CardActionArea
-          component={Link}
-          href={href}
-          target="_blank"
-          rel="noopener"
-          disabled={!href}
+          onClick={() => setOpen(true)}
+          sx={
+            horizontal
+              ? { width: { xs: "100%", sm: 320 }, flexShrink: 0 }
+              : undefined
+          }
         >
           <CardMedia
             component="img"
-            sx={{ height: { xs: 160, sm: 240 }, maxWidth: 800 }}
+            sx={{
+              aspectRatio: "16 / 9",
+              height: "auto",
+              width: "100%",
+              objectFit: "cover",
+            }}
             image={img_path}
             alt="Work Feature Image"
           />
         </CardActionArea>
       ) : null}
-      <CardContent>
+      {img_path ? (
+        <Dialog open={open} onClose={() => setOpen(false)} maxWidth="lg">
+          <Box
+            component="img"
+            src={img_path}
+            alt={work.name}
+            onClick={() => setOpen(false)}
+            sx={{
+              display: "block",
+              maxWidth: "100%",
+              maxHeight: "90vh",
+              cursor: "zoom-out",
+            }}
+          />
+        </Dialog>
+      ) : null}
+      <CardContent sx={{ flex: 1 }}>
         <Typography component="div" variant="h6">
           {work.name}
         </Typography>
-        {project && project.name !== work.name ? (
-          <Typography variant="body2" color="text.secondary">
-            Project: {project.name}
-          </Typography>
-        ) : null}
         {description ? (
           <Typography
             variant="subtitle1"

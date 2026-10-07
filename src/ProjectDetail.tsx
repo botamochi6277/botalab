@@ -92,8 +92,8 @@ export default function ProjectDetail(props: {
       </Typography>
       <Grid container spacing={2}>
         {works.map((w) => (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }} key={w.id}>
-            <WorkCard work={w} project={project} />
+          <Grid size={12} key={w.id}>
+            <WorkCard work={w} project={project} horizontal />
           </Grid>
         ))}
       </Grid>

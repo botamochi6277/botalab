@@ -3,7 +3,7 @@ works:
   - id: work-pp-3929
     project_id: pp-3929
     name: Long Tail Whale (xiao ver.)
-    mainImage: https://placehold.jp/800x600.png?text=Long%20Tail%20Whale%20%28xiao%20ver.%29
+    mainImage: https://placehold.jp/800x450.png?text=Long%20Tail%20Whale%20%28xiao%20ver.%29
     materials:
       - Seeed Studio XIAO nRF52840 Sense
     tools:
@@ -17,7 +17,7 @@ works:
   - id: work-pp-2687
     project_id: pp-2687
     name: Pictogram 3.0
-    mainImage: https://placehold.jp/800x600.png?text=Pictogram%203.0
+    mainImage: https://placehold.jp/800x450.png?text=Pictogram%203.0
     materials:
       - VRM
     tools:
@@ -29,7 +29,7 @@ works:
   - id: work-pp-5046
     project_id: pp-5046
     name: Life Scale ATARASY Robot (Unofficial)
-    mainImage: https://placehold.jp/800x600.png?text=Life%20Scale%20ATARASY%20Robot%20%28Unofficial%29
+    mainImage: https://placehold.jp/800x450.png?text=Life%20Scale%20ATARASY%20Robot%20%28Unofficial%29
     materials:
       - Feetech
     tools: []
@@ -38,7 +38,7 @@ works:
   - id: work-pp-3962
     project_id: pp-3962
     name: XIAO Domino
-    mainImage: https://placehold.jp/800x600.png?text=XIAO%20Domino
+    mainImage: https://placehold.jp/800x450.png?text=XIAO%20Domino
     materials:
       - Seeed Studio XIAO ESP32C3
     tools:
@@ -48,7 +48,7 @@ works:
   # - id: work-pp-3124
   #   project_id: pp-3124
   #   name: 電飾刀 -luminous katana-
-  #   mainImage: https://placehold.jp/800x600.png?text=%E9%9B%BB%E9%A3%BE%E5%88%80%20-luminous%20katana-
+  #   mainImage: https://placehold.jp/800x450.png?text=%E9%9B%BB%E9%A3%BE%E5%88%80%20-luminous%20katana-
   #   materials:
   #     - Seeed Studio XIAO nRF52840 Sense
   #   tools:
@@ -65,7 +65,7 @@ works:
   - id: sazanami
     project_id: katana
     name: 箔文 漣 (はくもん さざなみ)
-    mainImage: https://placehold.jp/800x600.png?text=%E7%AE%94%E6%96%87%20%E6%BC%A3%20%28%E3%81%AF%E3%81%8F%E3%82%82%E3%82%93%20%E3%81%95%E3%81%96%E3%81%AA%E3%81%BF%29
+    mainImage: sazanami.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
       - NeoPixel
@@ -76,6 +76,8 @@ works:
       - PlatformIO
     description: "\
       光が漏れてしまう隙間を減らすためにプリントパーツの径方向の分割をなくしている．\
+      軸方向においては，溶剤系接着剤とパテを活用し隙間を減らしている．\
+      しかし，光の透過特性が変わってしまうため，発行時には継ぎ目が目立ってしまうのが課題である．\
       初期は塗装により鎬部分を遮光していたが，剥がれ易かったため遮光テープに切り替えている．"
     exhibitions: []
     competitions:
@@ -85,7 +87,7 @@ works:
   - id: hatsushimo
     project_id: katana
     name: 蛍晶 初霜 (けいしょう はつしも)
-    mainImage: https://placehold.jp/800x600.png?text=%E8%9B%AE%E6%99%B6%20%E5%88%9D%E9%9C%9C%20%28%E3%81%91%E3%81%84%E3%81%A1%E3%82%87%E3%81%86%20%E3%81%AF%E3%81%A4%E3%81%97%E3%82%82%29
+    mainImage: https://placehold.jp/800x450.png?text=%E8%9B%AE%E6%99%B6%20%E5%88%9D%E9%9C%9C%20%28%E3%81%91%E3%81%84%E3%81%A1%E3%82%87%E3%81%86%20%E3%81%AF%E3%81%A4%E3%81%97%E3%82%82%29
     materials:
       - Seeed Studio XIAO nRF52840 Sense
       - NeoPixel
@@ -104,7 +106,7 @@ works:
   - id: work-pp-3928
     project_id: katana
     name: 折れた電飾刀
-    mainImage: https://placehold.jp/800x600.png?text=%E6%8A%98%E3%82%8C%E3%81%9F%E9%9B%BB%E9%A3%BE%E5%88%80
+    mainImage: https://placehold.jp/800x450.png?text=%E6%8A%98%E3%82%8C%E3%81%9F%E9%9B%BB%E9%A3%BE%E5%88%80
     materials:
       - Seeed Studio XIAO nRF52840
     tools:
@@ -115,7 +117,7 @@ works:
   - id: work-pp-5136
     project_id: pp-5136
     name: 推しｽﾀｯｸﾁｬﾝ
-    mainImage: https://placehold.jp/800x600.png?text=%E6%8E%A8%E3%81%97%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
+    mainImage: https://placehold.jp/800x450.png?text=%E6%8E%A8%E3%81%97%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
     materials:
       - M5Stack
       - ｽﾀｯｸﾁｬﾝ
@@ -130,7 +132,7 @@ works:
   - id: work-pp-2361
     project_id: pp-2361
     name: かがやく脇差
-    mainImage: https://placehold.jp/800x600.png?text=%E3%81%8B%E3%81%8C%E3%82%84%E3%81%8F%E8%84%87%E5%B7%AE
+    mainImage: https://placehold.jp/800x450.png?text=%E3%81%8B%E3%81%8C%E3%82%84%E3%81%8F%E8%84%87%E5%B7%AE
     materials: []
     tools: []
     exhibitions: []
@@ -138,7 +140,7 @@ works:
   - id: work-pp-6097
     project_id: pp-6097
     name: ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ13
-    mainImage: https://placehold.jp/800x600.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D13
+    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D13
     materials:
       - Feetech
       - M5Stack
@@ -150,7 +152,7 @@ works:
   - id: work-pp-3925
     project_id: pp-3925
     name: ProtoPedia Card
-    mainImage: https://placehold.jp/800x600.png?text=ProtoPedia%20Card
+    mainImage: https://placehold.jp/800x450.png?text=ProtoPedia%20Card
     materials: []
     tools:
       - MUI
@@ -164,7 +166,7 @@ works:
   - id: work-pp-5387
     project_id: pp-5387
     name: 機構武者
-    mainImage: https://placehold.jp/800x600.png?text=%E6%A9%9F%E6%A7%8B%E6%AD%A6%E8%80%85
+    mainImage: https://placehold.jp/800x450.png?text=%E6%A9%9F%E6%A7%8B%E6%AD%A6%E8%80%85
     materials: []
     tools:
       - 3Dプリンター
@@ -177,7 +179,7 @@ works:
   - id: work-pp-4607
     project_id: pp-4607
     name: BLE WEB Console
-    mainImage: https://placehold.jp/800x600.png?text=BLE%20WEB%20Console
+    mainImage: https://placehold.jp/800x450.png?text=BLE%20WEB%20Console
     materials: []
     tools:
       - MUI
@@ -189,7 +191,7 @@ works:
   - id: work-pp-4989
     project_id: pp-4989
     name: Crystal Math Grid
-    mainImage: https://placehold.jp/800x600.png?text=Crystal%20Math%20Grid
+    mainImage: https://placehold.jp/800x450.png?text=Crystal%20Math%20Grid
     materials: []
     tools:
       - Blender
@@ -200,7 +202,7 @@ works:
   - id: work-pp-6477
     project_id: pp-6477
     name: Stack-chan Zoo
-    mainImage: https://placehold.jp/800x600.png?text=Stack-chan%20Zoo
+    mainImage: https://placehold.jp/800x450.png?text=Stack-chan%20Zoo
     materials: []
     tools:
       - MUI
@@ -211,7 +213,7 @@ works:
   - id: work-pp-4980
     project_id: pp-4980
     name: CAMROBO++
-    mainImage: https://placehold.jp/800x600.png?text=CAMROBO%2B%2B
+    mainImage: https://placehold.jp/800x450.png?text=CAMROBO%2B%2B
     materials:
       - Raspberry Pi
       - Tamiya CAM-Programing Robot
@@ -222,7 +224,7 @@ works:
   - id: work-pp-2385
     project_id: pp-2385
     name: しっぽが動くぬいぐるみガジェット
-    mainImage: https://placehold.jp/800x600.png?text=%E3%81%97%E3%81%A3%E3%81%BD%E3%81%8C%E5%8B%95%E3%81%8F%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88
+    mainImage: https://placehold.jp/800x450.png?text=%E3%81%97%E3%81%A3%E3%81%BD%E3%81%8C%E5%8B%95%E3%81%8F%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88
     materials:
       - M5Stack
     tools:
@@ -237,7 +239,7 @@ works:
   - id: work-pp-4203
     project_id: pp-4203
     name: ｽﾀﾝﾃﾞｨﾝｸﾞ ｽﾀｯｸﾁｬﾝ
-    mainImage: https://placehold.jp/800x600.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%20%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
+    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%20%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
     materials:
       - M5Stack Core2
       - ｽﾀｯｸﾁｬﾝ
@@ -253,7 +255,7 @@ works:
   - id: work-pp-7999
     project_id: pp-7999
     name: ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄ
-    mainImage: https://placehold.jp/800x600.png?text=%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D%E3%81%AE%EF%BE%81%EF%BD%AC%EF%BE%98%EF%BD%B5%EF%BD%AF%EF%BE%84
+    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D%E3%81%AE%EF%BE%81%EF%BD%AC%EF%BE%98%EF%BD%B5%EF%BD%AF%EF%BE%84
     materials:
       - M5ATOM Lite
       - M5Stack Atomic Motion Base
