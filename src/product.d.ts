@@ -73,7 +73,5 @@ type WorkData = {
   description?: string,
   materials: string[],
   tools: string[],
-  exhibitions: string[],
-  competitions: string[],
   awards?: string[],
 }

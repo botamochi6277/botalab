@@ -15,8 +15,6 @@ import { ToolIcon, toolIconFile } from "./ToolIcon";
 // icons
 import HexagonIcon from "@mui/icons-material/Hexagon";
 import BuildIcon from "@mui/icons-material/Build";
-import EventIcon from "@mui/icons-material/Event";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 
 export const WorkCard = (props: {
@@ -98,16 +96,6 @@ export const WorkCard = (props: {
           items={work.awards ?? []}
           icon={<WorkspacePremiumIcon />}
           color="primary"
-        />
-        <ChipRow
-          items={work.exhibitions ?? []}
-          icon={<EventIcon />}
-          color="secondary"
-        />
-        <ChipRow
-          items={work.competitions ?? []}
-          icon={<EmojiEventsIcon />}
-          color="secondary"
         />
         <ChipRow
           items={(work.materials ?? []).filter((m) => m !== "ｽﾀｯｸﾁｬﾝ")}
