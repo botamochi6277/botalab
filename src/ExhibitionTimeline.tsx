@@ -71,7 +71,7 @@ export default function ExhibitionTimeline(props: {
           item.icon.includes(".jpg") ? (
             <Box
               component="img"
-              src={item.icon}
+              src={`/exhibitions/${item.icon}`}
               sx={{ width: 36, height: 36, borderRadius: 8 }}
             />
           ) : (
