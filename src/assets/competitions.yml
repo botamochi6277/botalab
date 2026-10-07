@@ -1,0 +1,18 @@
+# Generated from src/assets/prototypes_v2.json following the README migration guide.
+competitions:
+- id: m5stack2021
+  name: M5Stack Japan Creativity Contest 2021
+- id: m5stack2023
+  name: M5Stack Japan Creativity Contest 2023
+- id: m5stack2024
+  name: M5Stack Japan Creativity Contest 2024
+- id: mouser-awards-2023
+  name: Mouser Make Awards 2023
+- id: hl2021
+  name: ヒーローズ・リーグ 2021
+- id: hl2023
+  name: ヒーローズ・リーグ 2023
+- id: hl2024
+  name: ヒーローズ・リーグ 2024
+- id: hl2025
+  name: ヒーローズ・リーグ 2025

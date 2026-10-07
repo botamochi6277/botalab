@@ -16,6 +16,9 @@ import ProtoPediaList from "./ProtoPediaList";
 import TeamHeader from "./TeamHeader";
 import StatsTab from "./StatsTab";
 import NetworkTab from "./NetworkTab";
+import ProjectTab from "./ProjectTab";
+import ProjectDetail from "./ProjectDetail";
+import { matchProjectId, usePath } from "./router";
 
 // icons
 import {
@@ -23,14 +26,18 @@ import {
   QueryStats as QueryStatsIcon,
   Collections as CollectionsIcon,
   Hub as HubIcon,
+  AccountTree as AccountTreeIcon,
 } from "@mui/icons-material";
 
 // assets
 import profile from "./assets/profile.json";
 import my_theme from "./theme";
 import protopediaData from "./assets/prototypes_v2.json";
+import projectsData from "./assets/projects.yml";
+import worksData from "./assets/works.yml";
 
 function App() {
+  const projectId = matchProjectId(usePath());
   const [theme, setTheme] = React.useState(
     createTheme({
       ...my_theme,
@@ -78,12 +85,28 @@ function App() {
             key={"team_header"}
           />
 
+          {projectId !== null ? (
+            <ProjectDetail
+              project={projectsData.projects.find((p: ProjectData) => p.id === projectId)}
+              works={worksData.works.filter((w: WorkData) => w.project_id === projectId)}
+            />
+          ) : (
           <MyTabs
             key={"my_tabs"}
             items={[
               {
+                icon: <AccountTreeIcon fontSize="small" />,
+                label: "Projects",
+                content: (
+                  <ProjectTab
+                    projects={projectsData.projects}
+                    works={worksData.works}
+                  />
+                ),
+              },
+              {
                 icon: <CollectionsIcon fontSize="small" />,
-                label: "Works",
+                label: "Prototypes",
                 content: (
                   <ProtoPediaList prototypes={protopediaData.prototypes} />
                 ),
@@ -112,6 +135,7 @@ function App() {
               },
             ]}
           />
+          )}
         </Stack>
       </Container>
     </ThemeProvider>

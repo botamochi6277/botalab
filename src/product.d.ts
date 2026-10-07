@@ -47,3 +47,33 @@ type PrototypeV2Data = {
   viewCount: number,
   goodCount: number,
 }
+
+// projects.yml / works.yml
+type ProjectData = {
+  id: string,
+  name: string,
+  protopedia_id?: number,
+  developingStatus: number,
+  mainImage?: string,
+  description?: string,
+  developers?: string[],
+  team?: string,
+  topics?: string[],
+  createDate: string,
+  updateDate: string,
+  viewCount: number,
+  goodCount: number,
+}
+
+type WorkData = {
+  id: string,
+  project_id: string,
+  name: string,
+  mainImage?: string,
+  description?: string,
+  materials: string[],
+  tools: string[],
+  exhibitions: string[],
+  competitions: string[],
+  awards?: string[],
+}
