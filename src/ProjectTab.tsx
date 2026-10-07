@@ -28,13 +28,15 @@ type ChipColor = "default" | "primary" | "secondary";
 export const ChipRow = (props: {
   items: string[];
   icon: React.ReactElement;
+  // per-item icon override (e.g. brand icons); falls back to `icon`
+  iconFor?: (item: string) => React.ReactElement | undefined;
   color?: ChipColor;
 }) => (
   <Box>
     {props.items.map((s) => (
       <Chip
         key={s}
-        icon={props.icon}
+        icon={props.iconFor?.(s) ?? props.icon}
         label={s}
         size="small"
         color={props.color}
