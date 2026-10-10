@@ -38,7 +38,9 @@ export const WorkCard = (props: {
 
   return (
     <Card
+      id={`work-${work.id}`}
       sx={{
+        scrollMarginTop: 16,
         display: "flex",
         flexDirection: horizontal ? { xs: "column", sm: "row" } : "column",
         height: "100%",

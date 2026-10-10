@@ -4,6 +4,7 @@ import DevelopingStatusBadge from "./DevelopingStatusBadge";
 import { ChipRow } from "./ProjectTab";
 import { WorkCard, sortWorksByDate } from "./WorkTab";
 import { linkClick } from "./router";
+import WorkTimeline from "./WorkTimeline";
 
 // icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -90,6 +91,7 @@ export default function ProjectDetail(props: {
       <Typography variant="h5" component="h2" sx={{ mt: 3, mb: 1 }}>
         Works
       </Typography>
+      <WorkTimeline works={works} />
       <Grid container spacing={2}>
         {sortWorksByDate(works).map((w) => (
           <Grid size={12} key={w.id}>
