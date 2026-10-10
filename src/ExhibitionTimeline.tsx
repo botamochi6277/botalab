@@ -15,6 +15,13 @@ import {
 } from "@mui/material";
 
 import exhibitions from "./assets/exhibitions.json";
+import worksData from "./assets/works.yml";
+
+// bare file names live in public/works; URLs are used as is
+const workImage = (img?: string) =>
+  img && !/^(https?:)?\/\//.test(img) && !img.startsWith("/")
+    ? `/works/${img}`
+    : img;
 
 export default function ExhibitionTimeline(props: {
   prototypes?: PrototypeV2Data[];
@@ -45,6 +52,9 @@ export default function ExhibitionTimeline(props: {
     if (!props.prototypes) return [];
     return props.prototypes.filter((p) => ids.includes(p.id));
   };
+
+  const getWorksByWorkIds = (ids: string[]) =>
+    worksData.works.filter((w: WorkData) => ids.includes(w.id));
 
   const tl_items = items.reverse().map((item) => (
     <TimelineItem key={item.name}>
@@ -92,6 +102,16 @@ export default function ExhibitionTimeline(props: {
                 key={`${item.name}-${work.id}`}
                 alt={work.name}
                 src={work.mainImage}
+                sx={{ width: 36, height: 36 }}
+              />
+            ))}
+            {getWorksByWorkIds(
+              (item as { work_ids?: string[] }).work_ids || [],
+            ).map((work: WorkData) => (
+              <Avatar
+                key={`${item.name}-${work.id}`}
+                alt={work.name}
+                src={workImage(work.mainImage)}
                 sx={{ width: 36, height: 36 }}
               />
             ))}

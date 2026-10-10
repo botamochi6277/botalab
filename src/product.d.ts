@@ -43,6 +43,7 @@ type PrototypeV2Data = {
   updateDate: string,
   createDate: string,
   awards?: string[],
+  createDate?: string,
   events?: string[],
   viewCount: number,
   goodCount: number,
@@ -74,4 +75,5 @@ type WorkData = {
   materials: string[],
   tools: string[],
   awards?: string[],
+  createDate?: string,
 }

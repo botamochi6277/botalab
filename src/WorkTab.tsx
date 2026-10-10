@@ -30,6 +30,10 @@ export const WorkCard = (props: {
       : `/works/${work.mainImage}`
     : null;
   const description = work.description ?? project?.description;
+  // YAML loaders may turn bare dates into Date objects
+  const createDate = work.createDate
+    ? new Date(work.createDate).toISOString().slice(0, 10)
+    : null;
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -82,6 +86,11 @@ export const WorkCard = (props: {
         <Typography component="div" variant="h6">
           {work.name}
         </Typography>
+        {createDate ? (
+          <Typography variant="caption" color="text.secondary" component="div">
+            Created: {createDate}
+          </Typography>
+        ) : null}
         {description ? (
           <Typography
             variant="subtitle1"
@@ -114,14 +123,22 @@ export const WorkCard = (props: {
   );
 };
 
+// newest first; works without a date go last
+export const sortWorksByDate = (works: WorkData[]) => {
+  const time = (w: WorkData) =>
+    w.createDate ? new Date(w.createDate).getTime() : -Infinity;
+  return [...works].sort((a, b) => time(b) - time(a));
+};
+
 export default function WorkTab(props: {
   works: WorkData[];
   projects: ProjectData[];
 }) {
+  const sorted = sortWorksByDate(props.works);
   return (
     <Box>
       <Grid container spacing={2}>
-        {props.works.map((w) => (
+        {sorted.map((w) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={w.id}>
             <WorkCard
               work={w}

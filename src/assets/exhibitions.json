@@ -226,6 +226,10 @@
         5136,
         3124,
         2385
+      ],
+      "work_ids": [
+        "sazanami",
+        "bokumon"
       ]
     },
     {
@@ -239,6 +243,10 @@
       "prototype_ids": [
         5387,
         3124
+      ],
+      "work_ids": [
+        "bokumon",
+        "sazanami"
       ]
     },
     {
@@ -252,6 +260,9 @@
       "prototype_ids": [
         5387,
         3124
+      ],
+      "work_ids": [
+        "hatsushimo"
       ]
     },
     {
@@ -303,6 +314,9 @@
       "prototype_ids": [
         5387,
         3124
+      ],
+      "work_ids": [
+        "hatsushimo"
       ]
     },
     {
@@ -343,6 +357,9 @@
       "prototype_ids": [
         5387,
         3124
+      ],
+      "work_ids": [
+        "hoshinagi"
       ]
     },
     {
@@ -369,6 +386,10 @@
         5136,
         5387,
         3124
+      ],
+      "work_ids": [
+        "hoshinagi",
+        "hatsushimo"
       ]
     },
     {
@@ -382,6 +403,9 @@
       "prototype_ids": [
         5387,
         3124
+      ],
+      "work_ids": [
+        "hoshinagi"
       ]
     },
     {
@@ -396,6 +420,10 @@
         5136,
         5387,
         3124
+      ],
+      "work_ids": [
+        "hoshinagi",
+        "hatsushimo"
       ]
     },
     {

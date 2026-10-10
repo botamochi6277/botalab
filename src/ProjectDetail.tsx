@@ -2,7 +2,7 @@ import { Box, Button, Grid, Link, Stack, Typography } from "@mui/material";
 import CountBadge from "./CountBadge";
 import DevelopingStatusBadge from "./DevelopingStatusBadge";
 import { ChipRow } from "./ProjectTab";
-import { WorkCard } from "./WorkTab";
+import { WorkCard, sortWorksByDate } from "./WorkTab";
 import { linkClick } from "./router";
 
 // icons
@@ -91,7 +91,7 @@ export default function ProjectDetail(props: {
         Works
       </Typography>
       <Grid container spacing={2}>
-        {works.map((w) => (
+        {sortWorksByDate(works).map((w) => (
           <Grid size={12} key={w.id}>
             <WorkCard work={w} project={project} horizontal />
           </Grid>

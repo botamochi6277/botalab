@@ -10,10 +10,7 @@ works:
       - Blender
       - Fusion360
       - PlatformIO
-    exhibitions: []
-    competitions:
-      - Mouser Make Awards 2023
-      - ヒーローズ・リーグ 2023
+    createDate: 2023-06-13
   - id: work-pp-2687
     project_id: pp-2687
     name: Pictogram 3.0
@@ -23,9 +20,7 @@ works:
     tools:
       - Blender
       - Unity
-    exhibitions: []
-    competitions:
-      - ヒーローズ・リーグ 2021
+    createDate: 2021-11-12
   - id: work-pp-5046
     project_id: pp-5046
     name: Life Scale ATARASY Robot (Unofficial)
@@ -33,8 +28,7 @@ works:
     materials:
       - Feetech
     tools: []
-    exhibitions: []
-    competitions: []
+    createDate: 2024-01-26
   - id: work-pp-3962
     project_id: pp-3962
     name: XIAO Domino
@@ -43,25 +37,7 @@ works:
       - Seeed Studio XIAO ESP32C3
     tools:
       - Autodesk Eagle
-    exhibitions: []
-    competitions: []
-  # - id: work-pp-3124
-  #   project_id: pp-3124
-  #   name: 電飾刀 -luminous katana-
-  #   mainImage: https://placehold.jp/800x450.png?text=%E9%9B%BB%E9%A3%BE%E5%88%80%20-luminous%20katana-
-  #   materials:
-  #     - Seeed Studio XIAO nRF52840 Sense
-  #   tools:
-  #     - Arduino
-  #     - Fusion360
-  #   exhibitions:
-  #     - NT Tokyo 2023
-  #     - Kariya Micro Maker Faire 2024
-  #     - Ogaki Mini Maker Faire 2024
-  #     - つくろがや！ 2
-  #   competitions:
-  #     - Mouser Make Awards 2023
-  #     - ヒーローズ・リーグ 2023
+    createDate: 2023-06-28
   - id: sazanami
     project_id: katana
     name: 箔文 漣 (はくもん さざなみ)
@@ -75,19 +51,15 @@ works:
       - Fusion360
       - PlatformIO
     description: "\
-      光が漏れてしまう隙間を減らすためにプリントパーツの径方向の分割をなくしている．\
-      軸方向においては，溶剤系接着剤とパテを活用し隙間を減らしている．\
-      しかし，光の透過特性が変わってしまうため，発行時には継ぎ目が目立ってしまうのが課題である．\
-      初期は塗装により鎬部分を遮光していたが，剥がれ易かったため遮光テープに切り替えている．"
-    exhibitions: []
-    competitions:
-      - Mouser Make Awards 2023
-      - ヒーローズ・リーグ 2023
-    createDate: 2024-01-01
+      光が漏れてしまう隙間を減らすためにプリントパーツの径方向の分割をなくしました．\
+      軸方向においては，溶剤系接着剤とパテを活用し隙間を減らしています．\
+      しかし，光の透過特性が変わってしまうため，発行時には継ぎ目が目立ってしまうのが課題となっています．\
+      初期は塗装により鎬部分を遮光していましたが，剥がれ易かったため遮光テープに切り替えました．"
+    createDate: 2024-06-22
   - id: hatsushimo
     project_id: katana
     name: 蛍晶 初霜 (けいしょう はつしも)
-    mainImage: https://placehold.jp/800x450.png?text=%E8%9B%AE%E6%99%B6%20%E5%88%9D%E9%9C%9C%20%28%E3%81%91%E3%81%84%E3%81%A1%E3%82%87%E3%81%86%20%E3%81%AF%E3%81%A4%E3%81%97%E3%82%82%29
+    mainImage: hatsushimo.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
       - NeoPixel
@@ -96,24 +68,112 @@ works:
       - Blender
       - Fusion360
       - PlatformIO
+      - Bambu Lab P1S
     description: "\
-      家庭用の3Dプリンターでは刀身を一度に出力できない． \
-      そこで複数の分割したパーツで作成することを前提に，継ぎ目をあえて目立たせた刀身を設計した．\
-      また，濃口部分にボタンを配置し，色と発光パターンを変えられるようになっている．"
-    exhibitions: []
-    competitions: []
-    createDate: 2024-10-01
-  - id: work-pp-3928
+      家庭用の3Dプリンターでは大刀の刀身を一度に出力できません． \
+      そこで複数の分割したパーツで作成することを前提に，継ぎ目をあえて目立たせた刀身を設計しました．\
+      また，柄の縁部分にボタンを配置し，色と発光パターンを変えられるようにしています．"
+    createDate: 2025-06-01
+  - id: hoshinagi
+    project_id: katana
+    name: 蛍晶 星薙 (けいしょう ほしなぎ)
+    mainImage: hoshinagi.jpg
+    materials:
+      - Proffieboard V3
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - Arduino IDE
+      - Bambu Lab P1S
+    description: "\
+      前作の初霜の設計を元にしつつ，自作ライトセーバー用のマイコンを採用しました．\
+      効果音の再生・疑似的な触感フィードバック，斬撃に応じた光・音の放出など，表現の幅が大きく広がっています．\
+      芯材にJLCCNCのアルミ切削加工部品を導入し捻じり方向の荷重への対応を行っています．"
+    createDate: 2026-06-01
+  - id: inyou
+    project_id: katana
+    name: 陰陽 朔 (いんよう さく)
+    mainImage: inyou.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - RCR123A Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+    description: "\
+      鍔のない合口拵に挑戦するために試作した短刀です．\
+      LEDの粒を隠すために刃側と峰側で素材の色を切り替えています．\
+      つなぎ目には溶剤系の接着材を使ったうえで，やすり掛けをし目立たなくさせています．"
+    createDate: 2025-03-01
+  - id: hakuso
+    project_id: katana
+    name: 白素 虹目 (はくそ こうもく)
+    mainImage: hakuso.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - RCR123A Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+    description: "\
+      二刀差しをするために用意した脇差です．\
+      大刀に比べ柄が短いため，バッテリーを18650からRC123Aに変更しています．\
+      初期は峰側に金属テープを張っていたが，安いおもちゃの印象が強くなったため，不採用となりました．"
+    createDate: 2024-11-09
+  - id: bokumon
+    project_id: katana
+    name: 墨紋 大波 (ぼくもん おおなみ)
+    mainImage: bokumon.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+      - Adventurer 3
+    description: "\
+      塗装によりLEDの粒を隠蔽を試みた試作品です．\
+      遮光のためには3，4回塗り重ねる必要があります．\
+      しかし，抜刀・納刀時に鞘と擦れて塗装が剥がれやすく耐久性に難があります．"
+    createDate: 2024-06-22
+  - id: broken-katana
     project_id: katana
     name: 折れた電飾刀
-    mainImage: https://placehold.jp/800x450.png?text=%E6%8A%98%E3%82%8C%E3%81%9F%E9%9B%BB%E9%A3%BE%E5%88%80
+    mainImage: broken-katana.jpg
     materials:
       - Seeed Studio XIAO nRF52840
+      - NeoPixel
+      - 18650 Li-ion Battery
     tools:
       - PlatformIO
-    exhibitions: []
-    competitions: []
-    createDate: 2022-01-01
+    description: "\
+      持ち運びしやすくするために, 刀身を折って短くした電飾刀シリーズの1つです. \
+      電気と制御系統はフルサイズのものと同じなので，制御まわりのデバッグにも使えます."
+    createDate: 2023-06-13
+  - id: shihou
+    project_id: katana
+    name: 四方 虹開 (しほう にじびらき)
+    mainImage: shihou.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840
+      - NeoPixel
+      - Eneloop AAA Battery
+    tools:
+      - PlatformIO
+      - Adventurer 3
+    description: "\
+      フルカラーLEDを内蔵した最初の刀です．\
+      日本刀の四方詰めを参考に，刃の3Dプリント品を径方向に4分割しています．"
+    createDate: 2022-06-19
   - id: work-pp-5136
     project_id: pp-5136
     name: 推しｽﾀｯｸﾁｬﾝ
@@ -123,20 +183,14 @@ works:
       - ｽﾀｯｸﾁｬﾝ
     tools:
       - PlatformIO
-    exhibitions:
-      - つくろがや！ 2
-    competitions:
-      - M5Stack Japan Creativity Contest 2024
-      - ヒーローズ・リーグ 2024
-      - ヒーローズ・リーグ 2025
+    createDate: 2024-04-04
   - id: work-pp-2361
     project_id: pp-2361
     name: かがやく脇差
     mainImage: https://placehold.jp/800x450.png?text=%E3%81%8B%E3%81%8C%E3%82%84%E3%81%8F%E8%84%87%E5%B7%AE
     materials: []
     tools: []
-    exhibitions: []
-    competitions: []
+    createDate: 2021-08-14
   - id: work-pp-6097
     project_id: pp-6097
     name: ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ13
@@ -147,8 +201,7 @@ works:
       - ｽﾀｯｸﾁｬﾝ
     tools:
       - PlatformIO
-    exhibitions: []
-    competitions: []
+    createDate: 2024-09-16
   - id: work-pp-3925
     project_id: pp-3925
     name: ProtoPedia Card
@@ -158,11 +211,9 @@ works:
       - MUI
       - ProtoPedia API
       - React
-    exhibitions: []
-    competitions:
-      - ヒーローズ・リーグ 2023
     awards:
       - ProtoPedia賞 by 一般社団法人MA@ヒーローズ・リーグ 2023
+    createDate: 2023-06-12
   - id: work-pp-5387
     project_id: pp-5387
     name: 機構武者
@@ -173,9 +224,7 @@ works:
       - Blender
       - Fusion360
       - レーザーカッター
-    exhibitions:
-      - NT Kanazawa 2025
-    competitions: []
+    createDate: 2024-06-25
   - id: work-pp-4607
     project_id: pp-4607
     name: BLE WEB Console
@@ -185,9 +234,7 @@ works:
       - MUI
       - React
       - Web Bluetooth API
-    exhibitions: []
-    competitions:
-      - ヒーローズ・リーグ 2023
+    createDate: 2023-09-10
   - id: work-pp-4989
     project_id: pp-4989
     name: Crystal Math Grid
@@ -197,8 +244,7 @@ works:
       - Blender
       - Slicer for Fusion360
       - レーザーカッター
-    exhibitions: []
-    competitions: []
+    createDate: 2023-12-09
   - id: work-pp-6477
     project_id: pp-6477
     name: Stack-chan Zoo
@@ -208,8 +254,7 @@ works:
       - MUI
       - ProtoPedia API
       - React
-    exhibitions: []
-    competitions: []
+    createDate: 2024-12-31
   - id: work-pp-4980
     project_id: pp-4980
     name: CAMROBO++
@@ -219,8 +264,7 @@ works:
       - Tamiya CAM-Programing Robot
     tools:
       - ROS(Robot Operating System)
-    exhibitions: []
-    competitions: []
+    createDate: 2023-12-09
   - id: work-pp-2385
     project_id: pp-2385
     name: しっぽが動くぬいぐるみガジェット
@@ -229,13 +273,7 @@ works:
       - M5Stack
     tools:
       - Arduino
-    exhibitions:
-      - NT Kanazawa 2021
-      - NT Kanazawa 2022
-      - NT Kanazawa 2023
-      - Ogaki Mini Maker Faire 2022
-    competitions:
-      - M5Stack Japan Creativity Contest 2021
+    createDate: 2021-08-26
   - id: work-pp-4203
     project_id: pp-4203
     name: ｽﾀﾝﾃﾞｨﾝｸﾞ ｽﾀｯｸﾁｬﾝ
@@ -245,13 +283,9 @@ works:
       - ｽﾀｯｸﾁｬﾝ
     tools:
       - PlatformIO
-    exhibitions:
-      - つくろがや！ 2
-    competitions:
-      - M5Stack Japan Creativity Contest 2023
-      - ヒーローズ・リーグ 2023
     awards:
       - 視覚効果賞@M5Stack Japan Creativity Contest 2023
+    createDate: 2023-08-10
   - id: work-pp-7999
     project_id: pp-7999
     name: ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄ
@@ -263,5 +297,4 @@ works:
       - Bambu Lab P1S
       - Fusion360
       - PlatformIO
-    exhibitions: []
-    competitions: []
+    createDate: 2026-01-04
