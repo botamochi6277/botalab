@@ -181,15 +181,68 @@ works:
       フルカラーLEDを内蔵した最初の刀です．\
       日本刀の四方詰めを参考に，刃の3Dプリント品を径方向に4分割しています．"
     createDate: 2022-06-19
-  - id: work-pp-5136
-    project_id: pp-5136
-    name: 推しｽﾀｯｸﾁｬﾝ
-    mainImage: https://placehold.jp/800x450.png?text=%E6%8E%A8%E3%81%97%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
+  - id: fave-stackchan-m5
+    project_id: fave-stackchan
+    name: M5推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-m5.jpg
     materials:
-      - M5Stack
-      - ｽﾀｯｸﾁｬﾝ
+      - M5StackChan
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+    description: "\
+      M5StackChanを採用し，髪の毛が3Dプリントで作られたｽﾀｯｸﾁｬﾝです．\
+      3Dプリントによりケモ耳の厚みなどを表現できるようになりました．\
+      ピッチ方向の可動範囲が大きく広がったため，いったん後ろ髪をなくしています（真上を向いた際に，床に当たってしまうため）．
+      "
+    createDate: 2026-07-12
+  - id: fave-stackchan-aaa
+    project_id: fave-stackchan
+    name: 厚底推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-aaa.jpg
+    materials:
+      - M5Stack Core2
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+      - レーザーカッター
+    description: "\
+      靴を厚底にして，単四電池を4本入るようにしたｽﾀｯｸﾁｬﾝです．\
+      電池のおかげで，より長時間の単独稼働が可能になりました．\
+      "
+    createDate: 2025-02-09
+  - id: fave-stackchan-takao
+    project_id: fave-stackchan
+    name: しぐれろぼ
+    mainImage: fave-stackchan-takao.jpg
+    materials:
+      - M5Stack Core2
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+      - レーザーカッター
+    description: "\
+      顔をしぐれぬいを参考によりかわいくし，目の色などを変えられるようにしたことで表現の幅が広がりました．\
+      髪の毛も印刷ではなく，画用紙を使うことで断面・折り目でも色が変わらないようになりました．\
+      さらに，タカオ版基板を使った3Dプリンター製の身体に切り替わっています．\
+      "
+    createDate: 2025-01-20
+  - id: fave-stackchan-cardboard
+    project_id: fave-stackchan
+    name: ダンボール 推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-cardboard.jpg
+    materials:
+      - M5Stack Core2
     tools:
       - PlatformIO
+    description: "\
+      ねんどろいどとM5Stackの組み合わせ, 推し活ペーパークラフトの作品を見て思いついた，超かわいいｽﾀｯｸﾁｬﾝです．\
+      ダンボールｽﾀｯｸﾁｬﾝにペーパークラフトの髪の毛をかぶせています．\
+      顔は髪の毛に合わせて，押し活作品を参考に実装しました．\
+      "
     createDate: 2024-04-04
   - id: work-pp-2361
     project_id: pp-2361
