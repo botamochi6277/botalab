@@ -14,8 +14,8 @@ projects:
       - IMU
       - Tail
       - ぬいぐるみ
-    createDate: '2023-06-13 23:27:30.0'
-    updateDate: '2024-02-18 19:47:45.0'
+    createDate: "2023-06-13 23:27:30.0"
+    updateDate: "2024-02-18 19:47:45.0"
     viewCount: 612
     goodCount: 5
   - id: pp-2687
@@ -26,14 +26,14 @@ projects:
     description: いつも非常口にいるあの人がVRMのアバターとして飛び出してきました．いつどこでも，ここが非常口だと示すことができます．VRoid Hub でダウンロードできます．
     developers:
       - botamochi@botamochi6277
-    team: ''
+    team: ""
     topics:
       - Avatar
       - VRM
       - ヒーローズリーグ2021
       - ピクトグラム
-    createDate: '2021-11-12 20:08:01.0'
-    updateDate: '2021-11-14 21:46:41.0'
+    createDate: "2021-11-12 20:08:01.0"
+    updateDate: "2021-11-14 21:46:41.0"
     viewCount: 720
     goodCount: 3
   - id: pp-5046
@@ -46,8 +46,8 @@ projects:
       - botamochi@botamochi6277
     team: BotaLab
     topics: []
-    createDate: '2024-01-26 21:48:05.0'
-    updateDate: '2024-02-25 16:45:18.0'
+    createDate: "2024-01-26 21:48:05.0"
+    updateDate: "2024-02-25 16:45:18.0"
     viewCount: 328
     goodCount: 2
   - id: pp-3962
@@ -61,8 +61,8 @@ projects:
     team: BotaLab
     topics:
       - Seeed Studio XIAO Family
-    createDate: '2023-06-28 20:50:56.0'
-    updateDate: '2023-06-28 20:50:56.0'
+    createDate: "2023-06-28 20:50:56.0"
+    updateDate: "2023-06-28 20:50:56.0"
     viewCount: 295
     goodCount: 2
   - id: katana
@@ -79,8 +79,8 @@ projects:
       - IMU
       - Neopixel
       - 日本刀
-    createDate: '2022-08-07 21:58:10.0'
-    updateDate: '2024-11-17 15:18:38.0'
+    createDate: "2022-08-07 21:58:10.0"
+    updateDate: "2024-11-17 15:18:38.0"
     viewCount: 2081
     goodCount: 17
   - id: pp-3928
@@ -97,8 +97,8 @@ projects:
       - IMU
       - Neopixel
       - 日本刀
-    createDate: '2023-06-13 23:25:24.0'
-    updateDate: '2023-10-01 19:45:08.0'
+    createDate: "2023-06-13 23:25:24.0"
+    updateDate: "2023-10-01 19:45:08.0"
     viewCount: 250
     goodCount: 4
   - id: pp-5136
@@ -113,8 +113,8 @@ projects:
     topics:
       - ペーパークラフト
       - 推し活
-    createDate: '2024-04-04 00:37:25.0'
-    updateDate: '2025-11-12 21:43:55.0'
+    createDate: "2024-04-04 00:37:25.0"
+    updateDate: "2025-11-12 21:43:55.0"
     viewCount: 1322
     goodCount: 15
   - id: pp-2361
@@ -125,10 +125,10 @@ projects:
     description: シンプルな電飾ガジェットを作りたくて，開発したLEDで刃が発光する脇差です. 青色LEDテープとMDF板，アクリル板でできています．これがのちにフルカラーの電飾刀の開発に繋がります．
     developers:
       - botamochi@botamochi6277
-    team: ''
+    team: ""
     topics: []
-    createDate: '2021-08-14 15:22:31.0'
-    updateDate: '2023-10-01 19:50:34.0'
+    createDate: "2021-08-14 15:22:31.0"
+    updateDate: "2023-10-01 19:50:34.0"
     viewCount: 203
     goodCount: 2
   - id: pp-6097
@@ -143,8 +143,8 @@ projects:
     topics:
       - 3Dプリンター
       - DUMMY13
-    createDate: '2024-09-16 20:03:17.0'
-    updateDate: '2026-01-16 19:22:31.0'
+    createDate: "2024-09-16 20:03:17.0"
+    updateDate: "2026-01-16 19:22:31.0"
     viewCount: 323
     goodCount: 2
   - id: pp-3925
@@ -161,11 +161,11 @@ projects:
       - caption card
       - QRコード
       - TypeScript
-    createDate: '2023-06-12 20:02:40.0'
-    updateDate: '2024-02-06 18:06:36.0'
+    createDate: "2023-06-12 20:02:40.0"
+    updateDate: "2024-02-06 18:06:36.0"
     viewCount: 711
     goodCount: 13
-  - id: pp-5387
+  - id: saber
     name: 機構武者
     protopedia_id: 5387
     developingStatus: 2
@@ -177,8 +177,8 @@ projects:
     topics:
       - コスプレ
       - メカヘッド
-    createDate: '2024-06-25 11:57:47.0'
-    updateDate: '2026-10-01 20:36:57.0'
+    createDate: "2024-06-25 11:57:47.0"
+    updateDate: "2026-10-01 20:36:57.0"
     viewCount: 627
     goodCount: 7
   - id: pp-4607
@@ -194,8 +194,8 @@ projects:
       - Bluetooth
       - PWA
       - TypeScript
-    createDate: '2023-09-10 13:15:20.0'
-    updateDate: '2024-03-06 22:44:02.0'
+    createDate: "2023-09-10 13:15:20.0"
+    updateDate: "2024-03-06 22:44:02.0"
     viewCount: 632
     goodCount: 3
   - id: pp-4989
@@ -210,8 +210,8 @@ projects:
     topics:
       - Python
       - アクリル板
-    createDate: '2023-12-09 17:43:21.0'
-    updateDate: '2024-02-18 09:56:37.0'
+    createDate: "2023-12-09 17:43:21.0"
+    updateDate: "2024-02-18 09:56:37.0"
     viewCount: 480
     goodCount: 5
   - id: pp-6477
@@ -222,11 +222,11 @@ projects:
     description: ProtoPedia API v2を使って，ｽﾀｯｸﾁｬﾝ達を並べて見たり傾向をみたりできるWebページです．
     developers:
       - botamochi@botamochi6277
-    team: ''
+    team: ""
     topics:
       - ｽﾀｯｸﾁｬﾝ
-    createDate: '2024-12-31 20:53:01.0'
-    updateDate: '2024-12-31 20:53:20.0'
+    createDate: "2024-12-31 20:53:01.0"
+    updateDate: "2024-12-31 20:53:20.0"
     viewCount: 462
     goodCount: 5
   - id: pp-4980
@@ -241,8 +241,8 @@ projects:
     topics:
       - TAMIYA
       - Teleoperation
-    createDate: '2023-12-09 00:48:36.0'
-    updateDate: '2024-02-18 10:22:56.0'
+    createDate: "2023-12-09 00:48:36.0"
+    updateDate: "2024-02-18 10:22:56.0"
     viewCount: 553
     goodCount: 4
   - id: pp-2385
@@ -260,8 +260,8 @@ projects:
       - M5Stack_contest_2021
       - しっぽ
       - ぬいぐるみ
-    createDate: '2021-08-26 19:19:46.0'
-    updateDate: '2024-11-17 15:29:45.0'
+    createDate: "2021-08-26 19:19:46.0"
+    updateDate: "2024-11-17 15:29:45.0"
     viewCount: 1165
     goodCount: 10
   - id: pp-4203
@@ -276,8 +276,8 @@ projects:
     topics:
       - 3Dプリンター
       - Action Figure
-    createDate: '2023-08-10 22:25:14.0'
-    updateDate: '2025-01-07 18:37:37.0'
+    createDate: "2023-08-10 22:25:14.0"
+    updateDate: "2025-01-07 18:37:37.0"
     viewCount: 974
     goodCount: 9
   - id: pp-7999
@@ -292,7 +292,7 @@ projects:
     topics:
       - Bluetooth
       - ｽﾀｯｸﾁｬﾝ
-    createDate: '2026-01-04 22:44:20.0'
-    updateDate: '2026-08-08 13:12:04.0'
+    createDate: "2026-01-04 22:44:20.0"
+    updateDate: "2026-08-08 13:12:04.0"
     viewCount: 412
     goodCount: 2

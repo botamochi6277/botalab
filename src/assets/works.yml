@@ -221,16 +221,65 @@ works:
     awards:
       - ProtoPedia賞 by 一般社団法人MA@ヒーローズ・リーグ 2023
     createDate: 2023-06-12
-  - id: work-pp-5387
-    project_id: pp-5387
-    name: 機構武者
-    mainImage: https://placehold.jp/800x450.png?text=%E6%A9%9F%E6%A7%8B%E6%AD%A6%E8%80%85
+  - id: saber-2026-SS
+    project_id: saber
+    name: 機巧武者-2026 春夏
+    mainImage: saber-2026-SS.jpg
     materials: []
     tools:
-      - 3Dプリンター
       - Blender
       - Fusion360
       - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      バイザーの開閉機構を追加するために兜を3Dプリンターで作り直しました．\
+      またハーネスを改修し，運動時の安定性を向上させました．\
+      "
+    createDate: 2026-03-21
+  - id: saber-2025-AW
+    project_id: saber
+    name: 機巧武者-2025 秋冬
+    mainImage: saber-2025-AW.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      スチレンボードでは強度に欠けたため，甲冑を3Dプリンターで作成しなおしました．\
+      "
+    createDate: 2025-11-02
+  - id: saber-2025-SS
+    project_id: saber
+    name: 機巧武者-2025 春夏
+    mainImage: saber-2025-SS.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      スチレンボードを加工して甲冑を備えた武者です．\
+      スチレンボードにはリメイクシートを張り，手軽に色と素材感を出しています．\
+      さらに下や横からの攻撃に対応するために，ハーフミラーのバイザーを兜に採用し，視界を広げました．\
+      "
+    createDate: 2025-06-25
+  - id: saber-2024
+    project_id: saber
+    name: 機巧武者-2024
+    mainImage: saber-2024.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Adventurer 3
+    description: "\
+      アクリル板をレーザーカットして作成した兜と篭手を装備した武者です．\
+      まずは目立つ頭と手の部分から作成しました．\
+      板以外の部品を3Dプリントして作成しました．"
     createDate: 2024-06-25
   - id: work-pp-4607
     project_id: pp-4607
