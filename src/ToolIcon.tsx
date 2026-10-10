@@ -11,6 +11,8 @@ const toolIcons: Record<string, string> = {
   React: "react",
   Unity: "unity",
   Arduino: "arduino",
+  "Arduino IDE": "arduino",
+  "Adventurer 3": "flashforge",
   "ROS(Robot Operating System)": "ros",
   "Bambu Lab P1S": "bambulab",
   "Web Bluetooth API": "bluetooth",
@@ -18,9 +20,25 @@ const toolIcons: Record<string, string> = {
 
 export const toolIconFile = (tool: string) => toolIcons[tool];
 
+// Simple Icons files in public/materials
+const materialIcons: Record<string, string> = {
+  M5Stack: "m5stack",
+  "M5Stack Core2": "m5stack",
+  "M5Stack Atomic Motion Base": "m5stack",
+  M5StackChan: "m5stack",
+  "M5ATOM Lite": "m5stack",
+  "Raspberry Pi": "raspberrypi",
+  NeoPixel: "adafruit",
+};
+
+export const materialIconFile = (material: string) => materialIcons[material];
+
 // The SVG is used as a mask so that it follows the chip's text color in light/dark themes.
-export const ToolIcon = (props: { file: string }) => {
-  const url = `url(/tools/${props.file}.svg)`;
+export const ToolIcon = (props: {
+  file: string;
+  dir?: "tools" | "materials";
+}) => {
+  const url = `url(/${props.dir ?? "tools"}/${props.file}.svg)`;
   return (
     <Box
       component="span"

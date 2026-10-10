@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import * as React from "react";
 import { ChipRow } from "./ProjectTab";
-import { ToolIcon, toolIconFile } from "./ToolIcon";
+import { ToolIcon, materialIconFile, toolIconFile } from "./ToolIcon";
 
 // icons
 import HexagonIcon from "@mui/icons-material/Hexagon";
@@ -120,6 +120,10 @@ export const WorkCard = (props: {
         <ChipRow
           items={(work.materials ?? []).filter((m) => m !== "ｽﾀｯｸﾁｬﾝ")}
           icon={<HexagonIcon />}
+          iconFor={(m) => {
+            const f = materialIconFile(m);
+            return f ? <ToolIcon file={f} dir="materials" /> : undefined;
+          }}
         />
         <ChipRow
           items={work.tools ?? []}
