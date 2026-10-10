@@ -22,6 +22,8 @@ import HistoryIcon from "@mui/icons-material/History";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import UpdateIcon from "@mui/icons-material/Update";
+import PushPinIcon from "@mui/icons-material/PushPin";
+import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 
 type ChipColor = "default" | "primary" | "secondary";
 
@@ -46,15 +48,42 @@ export const ChipRow = (props: {
   </Box>
 );
 
-const ProjectCard = (props: { project: ProjectData }) => {
-  const { project } = props;
+const ProjectCard = (props: {
+  project: ProjectData;
+  pinned: boolean;
+  onTogglePin: () => void;
+}) => {
+  const { project, pinned } = props;
   const ss = project.mainImage?.split("/");
   const img_path = ss ? `./prototypes/${ss[ss.length - 1]}` : null;
 
   const href = projectPath(project.id);
 
   return (
-    <Card sx={{ flexDirection: "column", height: "100%" }}>
+    <Card
+      sx={{
+        position: "relative",
+        flexDirection: "column",
+        height: "100%",
+        ...(pinned && { border: 2, borderColor: "primary.main" }),
+      }}
+    >
+      <IconButton
+        size="small"
+        aria-label={pinned ? "Unpin project" : "Pin project"}
+        color={pinned ? "primary" : "default"}
+        onClick={props.onTogglePin}
+        sx={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          zIndex: 1,
+          bgcolor: "background.paper",
+          "&:hover": { bgcolor: "background.paper" },
+        }}
+      >
+        {pinned ? <PushPinIcon /> : <PushPinOutlinedIcon />}
+      </IconButton>
       <CardActionArea
         component={Link}
         href={href}
@@ -101,10 +130,35 @@ const orders = [
   { order: "updateDate", icon: <UpdateIcon /> },
 ];
 
+const PIN_KEY = "botalab.pinnedProjects";
+
+// Pins start from `pinned` in projects.yml; the visitor's toggles are kept in localStorage.
+const loadPinned = (projects: ProjectData[]): Set<string> => {
+  try {
+    const saved = localStorage.getItem(PIN_KEY);
+    if (saved) return new Set(JSON.parse(saved) as string[]);
+  } catch {
+    // storage unavailable or corrupted: fall back to the data
+  }
+  return new Set(projects.filter((p) => p.pinned).map((p) => p.id));
+};
+
 export default function ProjectTab(props: {
   projects: ProjectData[];
 }) {
   const [order, setOrder] = React.useState("views");
+  const [pinned, setPinned] = React.useState(() => loadPinned(props.projects));
+
+  const togglePin = (id: string) => {
+    const next = new Set(pinned);
+    if (!next.delete(id)) next.add(id);
+    setPinned(next);
+    try {
+      localStorage.setItem(PIN_KEY, JSON.stringify([...next]));
+    } catch {
+      // ignore: pins just won't persist
+    }
+  };
 
   const mySort = (a: ProjectData, b: ProjectData) => {
     switch (order) {
@@ -118,7 +172,10 @@ export default function ProjectTab(props: {
         return b.viewCount - a.viewCount;
     }
   };
-  const sorted = [...props.projects].sort(mySort);
+  const sorted = [...props.projects].sort(
+    (a, b) =>
+      Number(pinned.has(b.id)) - Number(pinned.has(a.id)) || mySort(a, b),
+  );
 
   return (
     <Box>
@@ -139,7 +196,11 @@ export default function ProjectTab(props: {
       <Grid container spacing={2}>
         {sorted.map((p) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={p.id}>
-            <ProjectCard project={p} />
+            <ProjectCard
+              project={p}
+              pinned={pinned.has(p.id)}
+              onTogglePin={() => togglePin(p.id)}
+            />
           </Grid>
         ))}
       </Grid>

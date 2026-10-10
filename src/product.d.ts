@@ -64,6 +64,7 @@ type ProjectData = {
   updateDate: string,
   viewCount: number,
   goodCount: number,
+  pinned?: boolean, // spotlighted by default; visitors can toggle
 }
 
 type WorkData = {

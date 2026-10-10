@@ -181,6 +181,7 @@ projects:
     updateDate: "2026-10-01 20:36:57.0"
     viewCount: 627
     goodCount: 7
+    pinned: true
   - id: pp-4607
     name: BLE WEB Console
     protopedia_id: 4607
