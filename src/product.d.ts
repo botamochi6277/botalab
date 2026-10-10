@@ -70,6 +70,7 @@ type WorkData = {
   id: string,
   project_id: string,
   name: string,
+  ruby?: string, // reading of the name (furigana)
   mainImage?: string,
   description?: string,
   materials: string[],

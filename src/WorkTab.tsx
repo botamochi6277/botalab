@@ -86,7 +86,16 @@ export const WorkCard = (props: {
       ) : null}
       <CardContent sx={{ flex: 1 }}>
         <Typography component="div" variant="h6">
-          {work.name}
+          {work.ruby ? (
+            <ruby>
+              {work.name}
+              <rp>(</rp>
+              <rt>{work.ruby}</rt>
+              <rp>)</rp>
+            </ruby>
+          ) : (
+            work.name
+          )}
         </Typography>
         {createDate ? (
           <Typography variant="caption" color="text.secondary" component="div">

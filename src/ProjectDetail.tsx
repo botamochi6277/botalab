@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import CountBadge from "./CountBadge";
 import DevelopingStatusBadge from "./DevelopingStatusBadge";
 import { ChipRow } from "./ProjectTab";
@@ -75,18 +75,26 @@ export default function ProjectDetail(props: {
           {project.description}
         </Typography>
       ) : null}
-      {project.protopedia_id ? (
-        <Link
-          href={`https://protopedia.net/prototype/${project.protopedia_id}`}
-          target="_blank"
-          rel="noopener"
-          sx={{ display: "inline-flex", alignItems: "center", gap: 0.5 }}
-        >
-          View on ProtoPedia <OpenInNewIcon fontSize="inherit" />
-        </Link>
-      ) : null}
       <ChipRow items={project.developers ?? []} icon={<PersonIcon />} />
       <ChipRow items={project.topics ?? []} icon={<TagIcon />} />
+      {project.protopedia_id ? (
+        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Button
+            variant="contained"
+            href={`https://protopedia.net/prototype/${project.protopedia_id}`}
+            target="_blank"
+            rel="noopener"
+            endIcon={<OpenInNewIcon />}
+            sx={{
+              bgcolor: "#02ADBC",
+              color: "#fff",
+              "&:hover": { bgcolor: "#02939f" },
+            }}
+          >
+            View on ProtoPedia
+          </Button>
+        </Box>
+      ) : null}
 
       <Typography variant="h5" component="h2" sx={{ mt: 3, mb: 1 }}>
         Works

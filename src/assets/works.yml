@@ -40,7 +40,8 @@ works:
     createDate: 2023-06-28
   - id: sazanami
     project_id: katana
-    name: 箔文 漣 (はくもん さざなみ)
+    name: 箔文 漣
+    ruby: はくもん さざなみ
     mainImage: sazanami.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
@@ -58,7 +59,8 @@ works:
     createDate: 2024-06-22
   - id: hatsushimo
     project_id: katana
-    name: 蛍晶 初霜 (けいしょう はつしも)
+    name: 蛍晶 初霜
+    ruby: けいしょう はつしも
     mainImage: hatsushimo.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
@@ -76,7 +78,8 @@ works:
     createDate: 2025-06-01
   - id: hoshinagi
     project_id: katana
-    name: 蛍晶 星薙 (けいしょう ほしなぎ)
+    name: 蛍晶 星薙
+    ruby: けいしょう ほしなぎ
     mainImage: hoshinagi.jpg
     materials:
       - Proffieboard V3
@@ -94,7 +97,8 @@ works:
     createDate: 2026-06-01
   - id: inyou
     project_id: katana
-    name: 陰陽 朔 (いんよう さく)
+    name: 陰陽 朔
+    ruby: いんよう さく
     mainImage: inyou.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
@@ -112,7 +116,8 @@ works:
     createDate: 2025-03-01
   - id: hakuso
     project_id: katana
-    name: 白素 虹目 (はくそ こうもく)
+    name: 白素 虹目
+    ruby: はくそ こうもく
     mainImage: hakuso.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
@@ -129,7 +134,8 @@ works:
     createDate: 2024-11-09
   - id: bokumon
     project_id: katana
-    name: 墨紋 大波 (ぼくもん おおなみ)
+    name: 墨紋 大波
+    ruby: ぼくもん おおなみ
     mainImage: bokumon.jpg
     materials:
       - Seeed Studio XIAO nRF52840 Sense
@@ -161,7 +167,8 @@ works:
     createDate: 2023-06-13
   - id: shihou
     project_id: katana
-    name: 四方 虹開 (しほう にじびらき)
+    name: 四方 虹開
+    ruby: しほう にじびらき
     mainImage: shihou.jpg
     materials:
       - Seeed Studio XIAO nRF52840
