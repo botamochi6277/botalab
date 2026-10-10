@@ -8,7 +8,7 @@ This is template to deploy a maker profile page
 
 ### ProtoPedia Works List
 
-Prototype list in your ProtoPedia Works.
+The data is created by `scripts/fetch_prototype_v2.js`, which creates `src/assets/prototypes_v2.json` and updates `src/assets/projects.yml`
 The list is created by `scripts/fetch_prototype.js`, which create `src/assets/prototypes.json`
 
 ### Exhibition Timeline
@@ -49,7 +49,6 @@ npm run dev
 | `projects.yml` | projects (1 project has n works) |
 | `works.yml` | works: `project_id`, `materials`, `tools`, `awards`, `mainImage` (URL, or a file name in `public/works/`) |
 | `exhibitions.yml` | exhibitions and the works exhibited at each (replaces `work.exhibitions`; an exhibition refers to works by work id) |
-| `competitions.yml` | competitions |
 
 `works.yml` no longer has `exhibitions` / `competitions` keys. The exhibited works are described on the exhibition side.
 
