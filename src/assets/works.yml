@@ -395,10 +395,10 @@ works:
     awards:
       - 視覚効果賞@M5Stack Japan Creativity Contest 2023
     createDate: 2023-08-10
-  - id: work-pp-7999
-    project_id: pp-7999
-    name: ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄ
-    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D%E3%81%AE%EF%BE%81%EF%BD%AC%EF%BE%98%EF%BD%B5%EF%BD%AF%EF%BE%84
+  - id: battle-chariot
+    project_id: chariot
+    name: ﾊﾞﾄﾙﾁｬﾘｵｯﾄ
+    mainImage: battle-chariot.jpg
     materials:
       - M5ATOM Lite
       - M5Stack Atomic Motion Base
@@ -406,4 +406,40 @@ works:
       - Bambu Lab P1S
       - Fusion360
       - PlatformIO
-    createDate: 2026-01-04
+    createDate: 2026-08-01
+    description: "\
+      車輪を大型化し，タイヤにTPU素材を使用したごついチャリオットです．\
+      以前のAmazonで適当に買ったモーターから，秋月電子で購入したマーキュリー製のモーターに交換しました．\
+      これにより，安定した走行が可能になりました．\
+      "
+  - id: chariot-dc1
+    project_id: chariot
+    name: dc motor ﾁｬﾘｵｯﾄ
+    mainImage: chariot-dc1.jpg
+    materials:
+      - M5ATOM Lite
+      - M5Stack Atomic Motion Base
+    tools:
+      - Bambu Lab P1S
+      - Fusion360
+      - PlatformIO
+    createDate: 2026-01-18
+    description: "\
+      Atomic Motion BaseとDCモーターを使った，ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄです．\
+      車体制御はM5Atom Liteで行っているため，ほとんどのｽﾀｯｸﾁｬﾝを乗車させることができます．\
+      "
+  - id: chariot-sg90
+    project_id: chariot
+    name: sg90 ﾁｬﾘｵｯﾄ
+    mainImage: chariot-sg90.jpg
+    materials:
+      - M5ATOM Lite
+    tools:
+      - Bambu Lab P1S
+      - Fusion360
+      - PlatformIO
+    description: "\
+      M5ATOM Liteを使った，ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄです．\
+      2つの連続回転サーボモーターを使って，動かすことができます．\
+      "
+    createDate: 2025-12-31
