@@ -33,7 +33,7 @@ const PublishedTrendChartCard = (props: { prototypes: PrototypeV2Data[] }) => {
     <Card>
       <CardContent>
         <Typography component="div" variant="h6">
-          Publication trends
+          Publication trend
         </Typography>
         <Typography variant="caption" color="text.secondary">
           The number of prototypes published to ProtoPedia each year. Note that
@@ -93,7 +93,7 @@ const EventTrendChartCard = () => {
     <Card>
       <CardContent>
         <Typography component="div" variant="h6">
-          Event trends
+          Exhibition trend
         </Typography>
         <LineChart
           xAxis={[
@@ -105,7 +105,7 @@ const EventTrendChartCard = () => {
               height: 60,
             },
           ]}
-          yAxis={[{ label: "#events" }]}
+          yAxis={[{ label: "#exhibitions" }]}
           series={[
             {
               curve: "linear",

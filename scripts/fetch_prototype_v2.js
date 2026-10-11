@@ -2,6 +2,7 @@
 import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
+import { load, dump } from 'js-yaml';
 import yargs from 'yargs';
 import { hideBin } from "yargs/helpers";
 
@@ -21,6 +22,11 @@ const args = yargs(hideBin(process.argv))
     alias: "o",
     default: "src/assets/prototypes_v2.json",
     type: "string"
+  })
+  .option("projects_output", {
+    default: "src/assets/projects.yml",
+    type: "string",
+    describe: "projects yaml to create/update. Existing projects are matched by protopedia_id and keep their id and hand-written fields."
   })
   .option("img_dir", {
     default: "public/prototypes",
@@ -107,6 +113,47 @@ const dumpPrototypeFromRawData = (rawData /* : PrototypeV2RawData*/) => {
   return proto;
 }
 
+// prototype -> project, following the migration guide in README
+const projectFromPrototype = (p) => ({
+  name: p.name,
+  protopedia_id: p.id,
+  developingStatus: p.developingStatus,
+  mainImage: p.mainImage,
+  description: p.summary,
+  developers: p.developers,
+  team: p.team,
+  topics: p.tags ?? [],
+  createDate: p.createDate,
+  updateDate: p.updateDate,
+  viewCount: p.viewCount,
+  goodCount: p.goodCount,
+});
+
+// Merge into the existing projects.yml: refresh fields derived from ProtoPedia,
+// keep ids and any other hand-written fields, append newly found prototypes,
+// and leave projects without a protopedia_id (or no longer listed) untouched.
+const updateProjectsYaml = (prototypes, file) => {
+  const header = '# Updated from the ProtoPedia API by scripts/fetch_prototype_v2.js\n';
+  const doc = fs.existsSync(file) ? load(fs.readFileSync(file, 'utf8')) : null;
+  const projects = doc?.projects ?? [];
+  const byPpId = new Map(projects.filter((q) => q.protopedia_id != null).map((q) => [q.protopedia_id, q]));
+
+  let added = 0;
+  prototypes.filter(Boolean).forEach((p) => {
+    const fresh = projectFromPrototype(p);
+    const old = byPpId.get(p.id);
+    if (old) {
+      Object.assign(old, fresh);
+    } else {
+      projects.push({ id: `pp-${p.id}`, ...fresh });
+      added++;
+    }
+  });
+
+  fs.writeFileSync(file, header + dump({ ...doc, projects }, { lineWidth: -1 }));
+  console.info(`Project data is in ${file} (${added} added)`);
+}
+
 const downloadFile = (url, path) => {
   axios.get(url, { responseType: "arraybuffer" })
     .then((res) => {
@@ -117,7 +164,7 @@ const downloadFile = (url, path) => {
 }
 
 const fetchProjectData = async (
-  token/*: string*/, userName/*: string*/, output, img_dir) => {
+  token/*: string*/, userName/*: string*/, output, img_dir, projects_output) => {
   // input validation
   const token_ref = token.match(/[a-f0-9]{32}/g);
   if (!token_ref) {
@@ -145,6 +192,9 @@ const fetchProjectData = async (
   const s = JSON.stringify({ datetime, prototypes });
   fs.writeFileSync(output, s);
   console.info(`Prototype data is in ${output}`)
+  if (projects_output) {
+    updateProjectsYaml(prototypes, projects_output);
+  }
   // download feature images
   prototypes.map((p) => {
     const img = p?.mainImage;
@@ -153,5 +203,5 @@ const fetchProjectData = async (
   })
 }
 
-fetchProjectData(args.api_key, args.userName, args.output, args.img_dir);
+fetchProjectData(args.api_key, args.userName, args.output, args.img_dir, args.projects_output);
 

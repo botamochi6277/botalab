@@ -1,0 +1,445 @@
+# Generated from src/assets/prototypes_v2.json following the README migration guide.
+works:
+  - id: work-pp-3929
+    project_id: pp-3929
+    name: Long Tail Whale (xiao ver.)
+    mainImage: https://placehold.jp/800x450.png?text=Long%20Tail%20Whale%20%28xiao%20ver.%29
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+    createDate: 2023-06-13
+  - id: work-pp-2687
+    project_id: pp-2687
+    name: Pictogram 3.0
+    mainImage: https://placehold.jp/800x450.png?text=Pictogram%203.0
+    materials:
+      - VRM
+    tools:
+      - Blender
+      - Unity
+    createDate: 2021-11-12
+  - id: work-pp-5046
+    project_id: pp-5046
+    name: Life Scale ATARASY Robot (Unofficial)
+    mainImage: https://placehold.jp/800x450.png?text=Life%20Scale%20ATARASY%20Robot%20%28Unofficial%29
+    materials:
+      - Feetech
+    tools: []
+    createDate: 2024-01-26
+  - id: work-pp-3962
+    project_id: pp-3962
+    name: XIAO Domino
+    mainImage: https://placehold.jp/800x450.png?text=XIAO%20Domino
+    materials:
+      - Seeed Studio XIAO ESP32C3
+    tools:
+      - Autodesk Eagle
+    createDate: 2023-06-28
+  - id: sazanami
+    project_id: katana
+    name: 箔文 漣
+    ruby: はくもん さざなみ
+    mainImage: sazanami.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+    description: "\
+      光が漏れてしまう隙間を減らすためにプリントパーツの径方向の分割をなくしました．\
+      軸方向においては，溶剤系接着剤とパテを活用し隙間を減らしています．\
+      しかし，光の透過特性が変わってしまうため，発行時には継ぎ目が目立ってしまうのが課題となっています．\
+      初期は塗装により鎬部分を遮光していましたが，剥がれ易かったため遮光テープに切り替えました．"
+    createDate: 2024-06-22
+  - id: hatsushimo
+    project_id: katana
+    name: 蛍晶 初霜
+    ruby: けいしょう はつしも
+    mainImage: hatsushimo.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+    description: "\
+      家庭用の3Dプリンターでは大刀の刀身を一度に出力できません． \
+      そこで複数の分割したパーツで作成することを前提に，継ぎ目をあえて目立たせた刀身を設計しました．\
+      また，柄の縁部分にボタンを配置し，色と発光パターンを変えられるようにしています．"
+    createDate: 2025-06-01
+  - id: hoshinagi
+    project_id: katana
+    name: 蛍晶 星薙
+    ruby: けいしょう ほしなぎ
+    mainImage: hoshinagi.jpg
+    materials:
+      - Proffieboard V3
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - Arduino IDE
+      - Bambu Lab P1S
+    description: "\
+      前作の初霜の設計を元にしつつ，自作ライトセーバー用のマイコンを採用しました．\
+      効果音の再生・疑似的な触感フィードバック，斬撃に応じた光・音の放出など，表現の幅が大きく広がっています．\
+      芯材にJLCCNCのアルミ切削加工部品を導入し捻じり方向の荷重への対応を行っています．"
+    createDate: 2026-06-01
+  - id: inyou
+    project_id: katana
+    name: 陰陽 朔
+    ruby: いんよう さく
+    mainImage: inyou.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - RCR123A Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+    description: "\
+      鍔のない合口拵に挑戦するために試作した短刀です．\
+      LEDの粒を隠すために刃側と峰側で素材の色を切り替えています．\
+      つなぎ目には溶剤系の接着材を使ったうえで，やすり掛けをし目立たなくさせています．"
+    createDate: 2025-03-01
+  - id: hakuso
+    project_id: katana
+    name: 白素 虹目
+    ruby: はくそ こうもく
+    mainImage: hakuso.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - RCR123A Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+    description: "\
+      二刀差しをするために用意した脇差です．\
+      大刀に比べ柄が短いため，バッテリーを18650からRC123Aに変更しています．\
+      初期は峰側に金属テープを張っていたが，安いおもちゃの印象が強くなったため，不採用となりました．"
+    createDate: 2024-11-09
+  - id: bokumon
+    project_id: katana
+    name: 墨紋 大波
+    ruby: ぼくもん おおなみ
+    mainImage: bokumon.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840 Sense
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - Blender
+      - Fusion360
+      - PlatformIO
+      - Adventurer 3
+    description: "\
+      塗装によりLEDの粒を隠蔽を試みた試作品です．\
+      遮光のためには3，4回塗り重ねる必要があります．\
+      しかし，抜刀・納刀時に鞘と擦れて塗装が剥がれやすく耐久性に難があります．"
+    createDate: 2024-06-22
+  - id: broken-katana
+    project_id: katana
+    name: 折れた電飾刀
+    mainImage: broken-katana.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840
+      - NeoPixel
+      - 18650 Li-ion Battery
+    tools:
+      - PlatformIO
+    description: "\
+      持ち運びしやすくするために, 刀身を折って短くした電飾刀シリーズの1つです. \
+      電気と制御系統はフルサイズのものと同じなので，制御まわりのデバッグにも使えます."
+    createDate: 2023-06-13
+  - id: shihou
+    project_id: katana
+    name: 四方 虹開
+    ruby: しほう にじびらき
+    mainImage: shihou.jpg
+    materials:
+      - Seeed Studio XIAO nRF52840
+      - NeoPixel
+      - Eneloop AAA Battery
+    tools:
+      - PlatformIO
+      - Adventurer 3
+    description: "\
+      フルカラーLEDを内蔵した最初の刀です．\
+      日本刀の四方詰めを参考に，刃の3Dプリント品を径方向に4分割しています．"
+    createDate: 2022-06-19
+  - id: fave-stackchan-m5
+    project_id: fave-stackchan
+    name: M5推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-m5.jpg
+    materials:
+      - M5StackChan
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+    description: "\
+      M5StackChanを採用し，髪の毛が3Dプリントで作られたｽﾀｯｸﾁｬﾝです．\
+      3Dプリントによりケモ耳の厚みなどを表現できるようになりました．\
+      ピッチ方向の可動範囲が大きく広がったため，いったん後ろ髪をなくしています（真上を向いた際に，床に当たってしまうため）．
+      "
+    createDate: 2026-07-12
+  - id: fave-stackchan-aaa
+    project_id: fave-stackchan
+    name: 厚底推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-aaa.jpg
+    materials:
+      - M5Stack Core2
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+      - レーザーカッター
+    description: "\
+      靴を厚底にして，単四電池を4本入るようにしたｽﾀｯｸﾁｬﾝです．\
+      電池のおかげで，より長時間の単独稼働が可能になりました．\
+      "
+    createDate: 2025-02-09
+  - id: fave-stackchan-takao
+    project_id: fave-stackchan
+    name: しぐれろぼ
+    mainImage: fave-stackchan-takao.jpg
+    materials:
+      - M5Stack Core2
+    tools:
+      - Fusion360
+      - PlatformIO
+      - Bambu Lab P1S
+      - レーザーカッター
+    description: "\
+      顔をしぐれぬいを参考によりかわいくし，目の色などを変えられるようにしたことで表現の幅が広がりました．\
+      髪の毛も印刷ではなく，画用紙を使うことで断面・折り目でも色が変わらないようになりました．\
+      さらに，タカオ版基板を使った3Dプリンター製の身体に切り替わっています．\
+      "
+    createDate: 2025-01-20
+  - id: fave-stackchan-cardboard
+    project_id: fave-stackchan
+    name: ダンボール 推しｽﾀｯｸﾁｬﾝ
+    mainImage: fave-stackchan-cardboard.jpg
+    materials:
+      - M5Stack Core2
+    tools:
+      - PlatformIO
+    description: "\
+      ねんどろいどとM5Stackの組み合わせ, 推し活ペーパークラフトの作品を見て思いついた，超かわいいｽﾀｯｸﾁｬﾝです．\
+      ダンボールｽﾀｯｸﾁｬﾝにペーパークラフトの髪の毛をかぶせています．\
+      顔は髪の毛に合わせて，押し活作品を参考に実装しました．\
+      "
+    createDate: 2024-04-04
+  - id: work-pp-2361
+    project_id: pp-2361
+    name: かがやく脇差
+    mainImage: https://placehold.jp/800x450.png?text=%E3%81%8B%E3%81%8C%E3%82%84%E3%81%8F%E8%84%87%E5%B7%AE
+    materials: []
+    tools: []
+    createDate: 2021-08-14
+  - id: work-pp-6097
+    project_id: pp-6097
+    name: ｽﾀﾝﾃﾞｨﾝｸﾞｽﾀｯｸﾁｬﾝ13
+    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D13
+    materials:
+      - Feetech
+      - M5Stack
+      - ｽﾀｯｸﾁｬﾝ
+    tools:
+      - PlatformIO
+    createDate: 2024-09-16
+  - id: work-pp-3925
+    project_id: pp-3925
+    name: ProtoPedia Card
+    mainImage: https://placehold.jp/800x450.png?text=ProtoPedia%20Card
+    materials: []
+    tools:
+      - MUI
+      - ProtoPedia API
+      - React
+    awards:
+      - ProtoPedia賞 by 一般社団法人MA@ヒーローズ・リーグ 2023
+    createDate: 2023-06-12
+  - id: saber-2026-SS
+    project_id: saber
+    name: 機巧武者-2026 春夏
+    mainImage: saber-2026-SS.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      バイザーの開閉機構を追加するために兜を3Dプリンターで作り直しました．\
+      またハーネスを改修し，運動時の安定性を向上させました．\
+      "
+    createDate: 2026-03-21
+  - id: saber-2025-AW
+    project_id: saber
+    name: 機巧武者-2025 秋冬
+    mainImage: saber-2025-AW.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      スチレンボードでは強度に欠けたため，甲冑を3Dプリンターで作成しなおしました．\
+      "
+    createDate: 2025-11-02
+  - id: saber-2025-SS
+    project_id: saber
+    name: 機巧武者-2025 春夏
+    mainImage: saber-2025-SS.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Bambu Lab P1S
+    description: "\
+      スチレンボードを加工して甲冑を備えた武者です．\
+      スチレンボードにはリメイクシートを張り，手軽に色と素材感を出しています．\
+      さらに下や横からの攻撃に対応するために，ハーフミラーのバイザーを兜に採用し，視界を広げました．\
+      "
+    createDate: 2025-06-25
+  - id: saber-2024
+    project_id: saber
+    name: 機巧武者-2024
+    mainImage: saber-2024.jpg
+    materials: []
+    tools:
+      - Blender
+      - Fusion360
+      - レーザーカッター
+      - Adventurer 3
+    description: "\
+      アクリル板をレーザーカットして作成した兜と篭手を装備した武者です．\
+      まずは目立つ頭と手の部分から作成しました．\
+      板以外の部品を3Dプリントして作成しました．"
+    createDate: 2024-06-25
+  - id: work-pp-4607
+    project_id: pp-4607
+    name: BLE WEB Console
+    mainImage: https://placehold.jp/800x450.png?text=BLE%20WEB%20Console
+    materials: []
+    tools:
+      - MUI
+      - React
+      - Web Bluetooth API
+    createDate: 2023-09-10
+  - id: work-pp-4989
+    project_id: pp-4989
+    name: Crystal Math Grid
+    mainImage: https://placehold.jp/800x450.png?text=Crystal%20Math%20Grid
+    materials: []
+    tools:
+      - Blender
+      - Slicer for Fusion360
+      - レーザーカッター
+    createDate: 2023-12-09
+  - id: work-pp-6477
+    project_id: pp-6477
+    name: Stack-chan Zoo
+    mainImage: https://placehold.jp/800x450.png?text=Stack-chan%20Zoo
+    materials: []
+    tools:
+      - MUI
+      - ProtoPedia API
+      - React
+    createDate: 2024-12-31
+  - id: work-pp-4980
+    project_id: pp-4980
+    name: CAMROBO++
+    mainImage: https://placehold.jp/800x450.png?text=CAMROBO%2B%2B
+    materials:
+      - Raspberry Pi
+      - Tamiya CAM-Programing Robot
+    tools:
+      - ROS(Robot Operating System)
+    createDate: 2023-12-09
+  - id: work-pp-2385
+    project_id: pp-2385
+    name: しっぽが動くぬいぐるみガジェット
+    mainImage: https://placehold.jp/800x450.png?text=%E3%81%97%E3%81%A3%E3%81%BD%E3%81%8C%E5%8B%95%E3%81%8F%E3%81%AC%E3%81%84%E3%81%90%E3%82%8B%E3%81%BF%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88
+    materials:
+      - M5Stack
+    tools:
+      - Arduino
+    createDate: 2021-08-26
+  - id: work-pp-4203
+    project_id: pp-4203
+    name: ｽﾀﾝﾃﾞｨﾝｸﾞ ｽﾀｯｸﾁｬﾝ
+    mainImage: https://placehold.jp/800x450.png?text=%EF%BD%BD%EF%BE%80%EF%BE%9D%EF%BE%83%EF%BE%9E%EF%BD%A8%EF%BE%9D%EF%BD%B8%EF%BE%9E%20%EF%BD%BD%EF%BE%80%EF%BD%AF%EF%BD%B8%EF%BE%81%EF%BD%AC%EF%BE%9D
+    materials:
+      - M5Stack Core2
+      - ｽﾀｯｸﾁｬﾝ
+    tools:
+      - PlatformIO
+    awards:
+      - 視覚効果賞@M5Stack Japan Creativity Contest 2023
+    createDate: 2023-08-10
+  - id: battle-chariot
+    project_id: chariot
+    name: ﾊﾞﾄﾙﾁｬﾘｵｯﾄ
+    mainImage: battle-chariot.jpg
+    materials:
+      - M5ATOM Lite
+      - M5Stack Atomic Motion Base
+    tools:
+      - Bambu Lab P1S
+      - Fusion360
+      - PlatformIO
+    createDate: 2026-08-01
+    description: "\
+      車輪を大型化し，タイヤにTPU素材を使用したごついチャリオットです．\
+      以前のAmazonで適当に買ったモーターから，秋月電子で購入したマーキュリー製のモーターに交換しました．\
+      これにより，安定した走行が可能になりました．\
+      "
+  - id: chariot-dc1
+    project_id: chariot
+    name: dc motor ﾁｬﾘｵｯﾄ
+    mainImage: chariot-dc1.jpg
+    materials:
+      - M5ATOM Lite
+      - M5Stack Atomic Motion Base
+    tools:
+      - Bambu Lab P1S
+      - Fusion360
+      - PlatformIO
+    createDate: 2026-01-18
+    description: "\
+      Atomic Motion BaseとDCモーターを使った，ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄです．\
+      車体制御はM5Atom Liteで行っているため，ほとんどのｽﾀｯｸﾁｬﾝを乗車させることができます．\
+      "
+  - id: chariot-sg90
+    project_id: chariot
+    name: sg90 ﾁｬﾘｵｯﾄ
+    mainImage: chariot-sg90.jpg
+    materials:
+      - M5ATOM Lite
+    tools:
+      - Bambu Lab P1S
+      - Fusion360
+      - PlatformIO
+    description: "\
+      M5ATOM Liteを使った，ｽﾀｯｸﾁｬﾝのﾁｬﾘｵｯﾄです．\
+      2つの連続回転サーボモーターを使って，動かすことができます．\
+      "
+    createDate: 2025-12-31

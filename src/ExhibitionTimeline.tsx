@@ -1,3 +1,4 @@
+import type * as React from "react";
 import Timeline from "@mui/lab/Timeline";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
@@ -12,9 +13,17 @@ import {
   Avatar,
   AvatarGroup,
   Box,
+  Chip,
 } from "@mui/material";
 
 import exhibitions from "./assets/exhibitions.json";
+import worksData from "./assets/works.yml";
+
+// bare file names live in public/works; URLs are used as is
+const workImage = (img?: string) =>
+  img && !/^(https?:)?\/\//.test(img) && !img.startsWith("/")
+    ? `/works/${img}`
+    : img;
 
 export default function ExhibitionTimeline(props: {
   prototypes?: PrototypeV2Data[];
@@ -46,8 +55,22 @@ export default function ExhibitionTimeline(props: {
     return props.prototypes.filter((p) => ids.includes(p.id));
   };
 
-  const tl_items = items.reverse().map((item) => (
-    <TimelineItem key={item.name}>
+  const getWorksByWorkIds = (ids: string[]) =>
+    worksData.works.filter((w: WorkData) => ids.includes(w.id));
+
+  const yearOf = (date: string) => new Date(date).getFullYear();
+  const yearId = (year: number) => `exhibition-year-${year}`;
+
+  const tl_items = items.reverse().map((item, i) => (
+    <TimelineItem
+      key={item.name}
+      id={
+        i === 0 || yearOf(items[i - 1].date) !== yearOf(item.date)
+          ? yearId(yearOf(item.date))
+          : undefined
+      }
+      sx={{ scrollMarginTop: 16 }}
+    >
       <TimelineOppositeContent
         sx={{ m: "auto 0", display: { xs: "none", sm: "block" } }}
         align="right"
@@ -71,7 +94,7 @@ export default function ExhibitionTimeline(props: {
           item.icon.includes(".jpg") ? (
             <Box
               component="img"
-              src={item.icon}
+              src={`/exhibitions/${item.icon}`}
               sx={{ width: 36, height: 36, borderRadius: 8 }}
             />
           ) : (
@@ -95,11 +118,47 @@ export default function ExhibitionTimeline(props: {
                 sx={{ width: 36, height: 36 }}
               />
             ))}
+            {getWorksByWorkIds(
+              (item as { work_ids?: string[] }).work_ids || [],
+            ).map((work: WorkData) => (
+              <Avatar
+                key={`${item.name}-${work.id}`}
+                alt={work.name}
+                src={workImage(work.mainImage)}
+                sx={{ width: 36, height: 36 }}
+              />
+            ))}
           </AvatarGroup>
         </Box>
       </TimelineContent>
     </TimelineItem>
   ));
 
-  return <Timeline>{tl_items}</Timeline>;
+  // newest first: the first item of each year is the anchor for its chip
+  const years = [...new Set(items.map((item) => yearOf(item.date)))];
+
+  return (
+    <Box>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2, mb: 1 }}>
+        {years.map((year) => (
+          <Chip
+            key={year}
+            label={year}
+            color="primary"
+            variant="outlined"
+            component="a"
+            href={`#${yearId(year)}`}
+            clickable
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              document
+                .getElementById(yearId(year))
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
+        ))}
+      </Box>
+      <Timeline>{tl_items}</Timeline>
+    </Box>
+  );
 }

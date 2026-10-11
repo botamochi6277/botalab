@@ -43,7 +43,39 @@ type PrototypeV2Data = {
   updateDate: string,
   createDate: string,
   awards?: string[],
+  createDate?: string,
   events?: string[],
   viewCount: number,
   goodCount: number,
+}
+
+// projects.yml / works.yml
+type ProjectData = {
+  id: string,
+  name: string,
+  protopedia_id?: number,
+  developingStatus: number,
+  mainImage?: string,
+  description?: string,
+  developers?: string[],
+  team?: string,
+  topics?: string[],
+  createDate: string,
+  updateDate: string,
+  viewCount: number,
+  goodCount: number,
+  pinned?: boolean, // spotlighted by default; visitors can toggle
+}
+
+type WorkData = {
+  id: string,
+  project_id: string,
+  name: string,
+  ruby?: string, // reading of the name (furigana)
+  mainImage?: string,
+  description?: string,
+  materials: string[],
+  tools: string[],
+  awards?: string[],
+  createDate?: string,
 }

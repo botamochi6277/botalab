@@ -1,14 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import yaml from '@modyfi/vite-plugin-yaml'
 
 // https://vitejs.dev/config/
 // https://qiita.com/tat_mae084/items/4051c61926dc8165e80b
 // https://rolldown.rs/reference/OutputOptions.codeSplitting
 export default defineConfig({
-  base: process.env.GITHUB_PAGES
-    ? "botalab"
-    : "./",
-  plugins: [react()],
+  // absolute base so assets resolve on nested routes such as /projects/{id}
+  base: "/",
+  plugins: [react(), yaml()],
   build: {
     rolldownOptions: {
       output: {
