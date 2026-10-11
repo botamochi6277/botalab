@@ -6,14 +6,10 @@ This is template to deploy a maker profile page
 
 ## Widgets
 
-### ProtoPedia Works List
-
-The data is created by `scripts/fetch_prototype_v2.js`, which creates `src/assets/prototypes_v2.json` and updates `src/assets/projects.yml`
-The list is created by `scripts/fetch_prototype.js`, which create `src/assets/prototypes.json`
-
-### Exhibition Timeline
-
-Exhibition Timeline created from `src/assets/exhibitions.json`
+- **Projects**: project cards with pin (spotlight) toggle, saved in the browser's localStorage. Each card links to a project detail page (`/projects/<id>`).
+- **Project detail**: ProtoPedia link, a horizontal timeline of the project's works, and work cards (newest first) with ruby, tools/materials icons, awards and create date.
+- **Exhibition Timeline**: created from `src/assets/exhibitions.json`, with year chips for jumping.
+- **Stats** and **Network**: charts and a relation graph built from the ProtoPedia data.
 
 ## Install
 
@@ -29,7 +25,23 @@ npm install
 npm run dev
 ```
 
-## Future Data structure
+### build
+
+```console
+npm run build   # type-check, bundle to dist/, copy index.html to 404.html
+```
+
+### Update ProtoPedia data
+
+```console
+mkdir -p public/prototypes
+node scripts/fetch_prototype_v2.js <userName> <api_key>
+```
+
+Options: `-o` output JSON, `--img_dir`, `--projects_output`.
+This writes `src/assets/prototypes_v2.json`, downloads images into `public/prototypes/` (gitignored), and merges the fetched data into `src/assets/projects.yml` (matched by `protopedia_id`; new prototypes are appended as `pp-<id>`).
+
+## Data structure
 
 ### items
 
@@ -40,17 +52,18 @@ npm run dev
 - tools
 - tags
 - exhibitions
-- competitions
 
 ### data files (`src/assets/`)
 
-| file | content |
-| --- | --- |
-| `projects.yml` | projects (1 project has n works) |
-| `works.yml` | works: `project_id`, `materials`, `tools`, `awards`, `mainImage` (URL, or a file name in `public/works/`) |
-| `exhibitions.yml` | exhibitions and the works exhibited at each (replaces `work.exhibitions`; an exhibition refers to works by work id) |
+| file                 | content                                                                                                                                                                     |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `projects.yml`       | projects (1 project has n works): `protopedia_id`, `developingStatus`, `mainImage`, `description`, `developers`, `topics`, `pinned`, ...                                    |
+| `works.yml`          | works: `project_id`, `name`, `ruby`, `materials`, `tools`, `awards`, `createDate`, `mainImage` (URL, or a file name in `public/works/`)                                     |
+| `exhibitions.json`   | exhibitions: `date`, `name`, `link`, `location`, `icon` (file name in `public/exhibitions/` or a MUI icon name), `prototype_ids` (ProtoPedia ids) and `work_ids` (work ids) |
+| `prototypes_v2.json` | raw ProtoPedia data (generated; used by Stats / Network)                                                                                                                    |
+| `profile.json`       | team/profile info                                                                                                                                                           |
 
-`works.yml` no longer has `exhibitions` / `competitions` keys. The exhibited works are described on the exhibition side.
+Tool and material icons are SVG files in `public/tools/` and `public/materials/`, mapped by name in `src/ToolIcon.tsx`.
 
 ProtoPedia service has no project, tool, and exhibitions. Data registered to ProtoPedia is insufficient to describe maker activities and project progress.
 
@@ -80,26 +93,6 @@ erDiagram
     DEVELOPER }|--|{WORK : make
 
     WORK}o--o{EXHIBITION : exhibit
-    WORK}o--o{COMPETITION : submit
 
 
-```
-
-### migration guide
-
-```
-prototype.name -> project.name
-prototype.id -> project.protopedia_id
-prototype.developingStatus -> project.developingStatus
-prototype.mainImage -> project.mainImage
-prototype.summary -> project.description
-prototype.developers -> project.developers
-prototype.team -> project.team
-prototype.materials -> work.materials (prototype.materials include materials and tools. for example, blender is tool)
-prototype.tags -> project.topics
-prototype.updateDate->project.updateDate
-prototype.createDate->project.createDate
-prototype.events->exhibitions.yml (exhibited works) / competitions.yml (contests: Heroes League, M5Stack Japan Creativity Contest, Mouser Make Awards)
-prototype.viewCount->project.viewCount
-prototype.goodCount->project.goodCount
 ```
