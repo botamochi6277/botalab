@@ -436,6 +436,18 @@
       ]
     },
     {
+      "date": "2026-10-31",
+      "name": "刈谷アニメcollection 2026",
+      "note": "",
+      "link": "https://kariya-anicolle.com/",
+      "location": "JR刈谷駅周辺",
+      "icon": "architecture",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
+    },
+    {
       "date": "2026-11-22",
       "name": "Armor Fes 2026",
       "note": "",
