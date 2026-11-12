@@ -448,12 +448,38 @@
       ]
     },
     {
+      "date": "2026-11-15",
+      "name": "NT Nagoya 2026",
+      "note": "sunday only",
+      "link": "https://wiki.nicotech.jp/nico_tech/?NT%E5%90%8D%E5%8F%A4%E5%B1%8B2026",
+      "location": "ヨシヅヤ Yストア 西春店 4F 特設会場",
+      "icon": "nt_generic.svg",
+      "period": "",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
+    },
+    {
       "date": "2026-11-22",
       "name": "Armor Fes 2026",
       "note": "",
       "link": "https://twipla.jp/events/710424",
       "location": "ユニオンベース:『Bullet』",
       "icon": "armor_fes.jpg",
+      "prototype_ids": [
+        5387,
+        3124
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "name": "Ogaki Mini Maker Faire 2026",
+      "note": "",
+      "link": "https://www.iamas.ac.jp/ommf2026/",
+      "location": "ソフトピアジャパンセンター",
+      "icon": "make_logo.svg",
+      "period": ",06",
       "prototype_ids": [
         5387,
         3124
